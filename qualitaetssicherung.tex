@@ -92,12 +92,19 @@ Aber was haben Kathedralen mit der Entwicklung von Softwareprojekten zu tun? Typ
 \subsection{Definition Integrität}
 Der Begriff konzeptionelle Integrität ist in keiner Literatur definiert. Selbst in keiner ISO-Norm zur Softwarequalität lässt sich der Begriff finden. Was sich aber finden lässt, ist eine Definition des Begriffs Integrität. Die mehrfach belegte Bedeutung macht es zu einem Homonym und ist dementsprechend nicht immer auf Anhieb passend zu verstehen, da sie von Themenfeld zu Themenfeld anders ausgelegt werden kann. Für unser Verständnis müssen wir den Begriff der Integrität aus der lateinischen Sprache übersetzen, die sich in unversehrt, intakt oder vollständig deuten lässt. Die Bedeutung dieser Vollständigkeit brauchen wir in unserem Kontext. 
 \subsection{Integer vs. Float}
-Wir versuchen anhand dieser beiden Datentypen den begriff Integrität noch einmal klarer darzustellen. Der Datentyp speichert nur ganze Zahlen, ohne Zwischenwerte. Er bildet also einen bestimmten Zahlenbereich innerhalb der ganzen Zahlen vollständig ab und bietet damit eine gewisse Abgeschlossenheit. Ein gutes Gegenbeispiel ist der Datentyp Float. Dieser bildet reelle Zahlen ab. Dieser Datentyp lässt also im Gegensatz zu ganzen Zahlen auch gebrochene Zahlen zu. Dadurch können auch ungenaue Werte entstehen. Beispielsweise deckt ein Integer mit 32 Bit alle ganze Zahlen zwischen -2.147.483.648 und 2.147.483.647 ab \cite{dewiki:integer}, während eine 32-Bit Fließkommazahl diese Bits in Exponent und Mantisse aufteilt, um dynamisch einen möglichst großen Bereich an Zahlen abzudecken. Dieser Datentyp kann hierbei wesentlich größere, oder kleinere Zahlen darstellen als ein 32-Bit Integer, weist aber genau dann, oder bei Zahlen, mit besonders vielen Nachkommastellen, Lücken auf. \cite{dewiki:float} Da reelle Zahlen zu dem \texttt{dicht liegen}, was bedeutet, dass zwischen allen zwei reellen Zahlen immer eine weitere reelle Zahl gefunden werden kann, ist es sonst auch gar nicht möglich einen Datentyp zu definieren, der einen beliebigen Zahlenbereich in den reellen Zahlen unter Verwendung einer fixen Speichergröße abdeckt. 
+Wir versuchen anhand dieser beiden Datentypen den Begriff Integrität noch einmal klarer darzustellen. Der Datentyp speichert nur ganze Zahlen, ohne Zwischenwerte. Er bildet also einen bestimmten Zahlenbereich innerhalb der ganzen Zahlen vollständig ab und bietet damit eine gewisse Abgeschlossenheit. Ein gutes Gegenbeispiel ist der Datentyp Float. Dieser bildet reelle Zahlen ab. Dieser Datentyp lässt also im Gegensatz zu ganzen Zahlen auch gebrochene Zahlen zu. Dadurch können auch ungenaue Werte entstehen. Beispielsweise deckt ein Integer mit 32 Bit alle ganze Zahlen zwischen -2.147.483.648 und 2.147.483.647 ab \cite{dewiki:integer}, während eine 32-Bit Fließkommazahl diese Bits in Exponent und Mantisse aufteilt, um dynamisch einen möglichst großen Bereich an Zahlen abzudecken. Dieser Datentyp kann hierbei wesentlich größere, oder kleinere Zahlen darstellen als ein 32-Bit Integer, weist aber genau dann, oder bei Zahlen, mit besonders vielen Nachkommastellen, Lücken auf. \cite{dewiki:float} Da reelle Zahlen zu dem \texttt{dicht liegen}, was bedeutet, dass zwischen allen zwei reellen Zahlen immer eine weitere reelle Zahl gefunden werden kann, ist es sonst auch gar nicht möglich einen Datentyp zu definieren, der einen beliebigen Zahlenbereich in den reellen Zahlen unter Verwendung einer fixen Speichergröße abdeckt. 
 
 \subsection{Was versteht man unter konzeptioneller Integrität?}
 Was ist also unter konzeptioneller zu Verstehen?
 Den Grad von Kohäsion und Widerspruchsfreiheit von Anforderungen, die ein System in sich vereinen muss. Kohäsion bedeutet hierbei, wie eng die Anforderungen der Software zueinander in Beziehung stehen.
 
+\subsection{Beispiele für konzeptionelle Integrität}
+
+\subsubsection{Kundendaten}
+Angenommen es gibt eine API-Schnittstelle die das Geburtsdatum eines Kundens in drei Parametern übergeben haben möchte. Auf dem Kontakformular der Registrierung gibt es aber nur ein Feld, der auch noch keinen Datum-Format vorschreibt. Dies ist ein offensichtlichter Widerspruch zwischen den zwei Schnittstellen, der für den Entwickler Aufwand bedeuted um die Formate richtig zu konvertieren. Hier ist die konzeptionelle Integrität offensichtlich nicht gegeben und verursacht dadurch Mehrkosten.
+
+\subsubsection{Bestellsystem}
+Ein externes System soll nur fünstellige Postleitzahlen akzeptieren. Dabei ist eine Anforderung, dass Bestellungen aus der Schweiz möglich sein sollten. Nun liegt das Problem in der Vierstelligkeit der Postleitzahl die in der Schweiz nunmal üblich ist. Die Erschwernis folgt nun aus dem Code des externen Systems und der Anforderungsdokumentation die einander nicht widersprechen sollten, da sonst die Verständlichkeit des Systems leidet.
 
 \subsection{Smartphone-Betriebssysteme}
 
@@ -109,7 +116,43 @@ Der Zeitdruck diktiert jedoch, dass der Systemaufbau viele Hände braucht. Es gi
 Die Trennung von architektonischem Aufwand und Implementierung ist eine sehr wirksame Methode, um konzeptionelle Integrität bei sehr großen Projekten zu erreichen.
 Der Architekt eines Systems ist, wie der Architekt eines Gebäudes, der Vertreter des Benutzers. Seine Aufgabe ist es, sein fachliches und technisches Wissen im uneingeschränkten Interesse des Benutzers einzubringen, im Gegensatz zu den Interessen des Verkäufers, des Herstellers usw. Die Architektur muss sorgfältig von der Umsetzung unterschieden werden. Wie Blaauw sagte: "Während die Architektur sagt, was geschieht, sagt die Implementierung, wie es geschieht". Als einfaches Beispiel nennt er eine Uhr, deren Architektur aus dem Zifferblatt, den Zeigern und dem Aufziehknopf besteht. Wenn ein Kind diese Architektur erlernt hat, kann es die Zeit an einer Armbanduhr ebenso leicht ablesen wie an einem Kirchturm. Die Umsetzung und die Verwirklichung beschreiben jedoch, was im Inneren des Gehäuses vor sich geht: die Energieversorgung durch einen von vielen Mechanismen und die Kontrolle der Genauigkeit durch einen von vielen.
 
-\section{Wischiwaschi-Metrik}
+\section{Wischiwaschi}
+Die Definition der widerspruchsfreien Anforderungen mit hoher Kohärez ist schwierig greifbar und macht es problemmatisch die Integrität an sich zu messen.
+Eine gute Alternative, um die Integrität deutlicher zu machen wäre die Abewesenheit von dieser festzustellen. Für diese Ausarbeitung haben wir uns für den Begriff 'Wischiwaschi' entschieden, da er auch in unserer Quelle so Verwendung findet und uns auch etwas passend scheint. Indikatoren für Wischiwaschi wären: \\
+\begin{itemize}
+    \item Unklare, widersprüchliche oder mehrdeutige Anforderungen\\
+Beispiele für diesen Punkt sind nicht verstandene oder schlecht erklärte User Storys oder Roadmaps. 
+    \item Lange Abstimmungsrunden\\
+Gründe wären zu lange Diskussionen, zu viele Verständnisfragen oder Erklärungen zum Projekt
+    \item Hohe Änderungsraten\\
+Wenn sich die Anforderungen in einer hohen Frequenzen ändern und der aktuelle Entwicklungsstand dementsprechend aktualisert werden muss. Beispiele wären von Anfang an unklare Anforderungen die während der Projektlaufzeit spezifiziert werden.
+    \item Explodierende Kosten\\
+Da die tatsächliche Kosten die der geplanten Kosten übersteigen ist es möglich, dass die Projektplanung, aufgrund falsch verstandener Anforderungen, schief gelaufen ist.
+    \item Projektverzug\\
+Gründe können für ein Projektverzug sein, dass die Aufwandschätzungen, wegen mangel an Verständnis für das Projekt, einfach schlecht waren.
+    \item Hohe Komplexität\\
+Es werden im Team viele Fehler gemacht oder das Verstehen des Projektes scheint schwer zu sein. So steigt die Schieflage immer mehr je mehr Anforderungen an das Projekt gestellt werden.
+    \item Schlechte Performance\\
+Die Performance ist daher ein Indiz da das Projekt für die Anwendung ungeeignete oder falsche Werkzeuge nutzt. Mögliche Gründe wären hier zu hohe Änderungsraten, bei denen dann die Werkzeuge nicht optimiert oder ausgetauscht wurden. Auch eine falsches Verstädnis vom Projekt könnte eine falsche Annahme der benötigten Mittel herbeiführen.\\
+Ein weiterer Grund könnte die unnötige Komplexität des Projektes sein. Funktionen die sich gegenseitig beeinflusen und somit die Performance reduzieren.
+    \item Hohe Lernkurve der Anwendung\\
+Hohe Lernkurven können passieren aufgrund nicht durchdachtem Design der Anwendung. Ursachen dafür könnten schlecht verstandene Anforderungen die zu einem schlechten Designkonzept führen.
+\end{itemize}
+\section{Maßnahmen gegen Wischiwaschi}
+Um diese Problematiken zu lösen gibt es mehrere Ansatzpunkte die wir in Folge erklären.
+\subsection{Klare Defintion der Geschäftsziele}
+Klare Defintion der Geschäftsziele die das System unterstützen muss.
+\subsection{Contentstrategie}
+Die Contentstrategie schlägt die Brücke zwischen der Geschäftsstrategie und Ihrem Contentmodell.
+\subsection{Werkzeuge/Tools}
+Werkzeuge zu unterstützung von strukturierte Ablage sowie Änderungsprozessen.\
+
+\section{Vorteile hoher konzeptioneller Integrität}
+\subsection{Wartbarkeit/Änderbarkeit}
+\subsection{Bedienbarkeit/Erlernbarkeit}
+\subsection{Angepasste Komplexität}
+\subsection{Performance}
+\subsection{Planbarkeit}
 \section{Konzeptionelle Integrität bei Scrum}
 \section{Fazit}
 
