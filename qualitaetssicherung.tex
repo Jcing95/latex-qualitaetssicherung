@@ -1,0 +1,118 @@
+\documentclass[a4paper, ngerman, 12pt, usenames, dvipsnames]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage{lmodern}
+\usepackage{microtype}
+%\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[export]{adjustbox}
+\usepackage{tikzpagenodes}
+\usepackage{natbib}
+\usetikzlibrary{calc}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+
+\title{Aristocracy, Democracy and System Design}
+\author{Jasin Aferkou and Egzon Islami}
+\date{14. November 2022}
+
+%Page Style
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0.4pt} % Obere Trennlinie
+\fancyfoot[C]{\thepage} 
+\fancyhead[R]{Qualitätssicherung}
+\fancyhead[L]{\leftmark}
+\setlength{\footskip}{50pt}
+
+
+\begin{document}
+\begin{titlepage}
+
+    \begin{figure}[h]
+        \begin{subfigure}[t]{10cm}
+            \vskip 0pt
+            \includegraphics[width=5cm,left]{images/HKA_IWI_Wortmarke_RGB.jpg}\\
+            Studiengang\\
+            \textbf{Medien- und Kommunikationsinformatik}\\
+        \end{subfigure}
+        \begin{subfigure}[t]{3cm}
+            \vskip 0pt
+            \includegraphics[width=3cm,right]{images/HKA_IWI_Bildmarke_RGB.jpg}
+        \end{subfigure}
+    \end{figure}
+    \begin{center}
+        %\vspace*{2cm}
+        \Large
+        \vspace{1cm}
+        \huge
+        \textbf{Aristocracy, Democracy and System Design}\\
+        \vspace{2cm}
+        \normalsize
+        \textbf{Jasin Aferkou} - 71963 - afja1011@h-ka.de\\
+        \textbf{Egzon Islami} - 65124 - iseg1011@h-ka.de\\
+        
+        \vspace{2cm}
+        Qualitätssicherung\\
+        \vspace{1.5cm}
+        \small
+        30. Mai 2022
+    \end{center}
+\end{titlepage}
+\pagebreak
+
+\tableofcontents
+\thispagestyle{empty}
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\pagebreak
+
+\section{Einleitung}
+\subsection{Kathedralen}
+Der Großteil europäischer Kathedralen zeigt Zeichen verschiedener architektonischer Stile und Epochen.
+Dies liegt genau daran, dass diese gigantischen Bauprojekte über mehrere Jahrhunderte und damit über mehrere Generationen von Architekten und Erbauern durchgeführt wurden.
+Hierdurch fließen typischerweise die verschiedenen Geschmäcker und die Mode der verschiedenen Generationen ein.
+Das führt dann natürlich zu stilistischen Brüchen in der Gesamtstruktur dieser Gebäude.
+Die Kathedrale von Reims\footnote{Auch bekannt als Kathedrale de Reims} sticht hierbei dadurch heraus, dass diese ein äußerst stimmiges Bild ausstrahlt.
+Diese \texttt{architektonische Integrität} konnte nur zustande kommen, indem die nachfolgenden Architekten und Erbauer darauf verzichteten ihre eigenen Ideen einfließen zu lassen, um genau die ursprüngliche Vision der ersten Architekten durchzusetzen. Sie wollten ein pures Design und damit ein stimmiges Gesamtbild erreichen.
+
+\subsection{Software-Analogie}
+Aber was haben Kathedralen mit der Entwicklung von Softwareprojekten zu tun? Typischerweise bestehen die Teams, die insbesondere große Softwareprojekte umsetzen aus vielen Entwicklern. Softwareingenieure neigen hierbei auch dazu eine feste Meinung zu haben, wie bestimmte Probleme am besten zu lösen seien. Das ist natürlich menschlich, kann aber dazu führen, dass die Vision des Projektes aus dem Gleichgewicht gerät. Es entsteht eine konzeptionelle Uneinigkeit bei diesem Projekt. Hierbei liegt es allerdings nicht daran, dass das Projekt an einem bestimmten Punkt an nachfolgende Hauptdesigner oder Architekten überreicht wird, sondern an der Einteilung des Designs in viele Aufgaben, die von vielen verschiedenen Menschen bearbeitet werden.
+
+\pagebreak
+\section{Konzeptionelle Integrität}
+\subsection{Definition Integrität}
+Der Begriff konzeptionelle Integrität ist in keiner Literatur definiert. Selbst in keiner ISO-Norm zur Softwarequalität lässt sich der Begriff finden. Was sich aber finden lässt, ist eine Definition des Begriffs Integrität. Die mehrfach belegte Bedeutung macht es zu einem Homonym und ist dementsprechend nicht immer auf Anhieb passend zu verstehen, da sie von Themenfeld zu Themenfeld anders ausgelegt werden kann. Für unser Verständnis müssen wir den Begriff der Integrität aus der lateinischen Sprache übersetzen, die sich in unversehrt, intakt oder vollständig deuten lässt. Die Bedeutung dieser Vollständigkeit brauchen wir in unserem Kontext. Ein gutes Beispiel wäre der 
+\subsection{Integer vs. Float}
+Wir versuchen anhand dieser beiden Datentypen den begriff Integrität noch einmal klarer darzustellen. Der Datentyp speichert nur ganze Zahlen, ohne Zwischenwerte. Er bildet also einen bestimmten Zahlenbereich innerhalb der ganzen Zahlen vollständig ab und bietet damit eine gewisse Abgeschlossenheit. Ein gutes Gegenbeispiel ist der Datentyp Float. Dieser bildet reelle Zahlen ab. Dieser Datentyp lässt also im Gegensatz zu ganzen Zahlen auch gebrochene Zahlen zu. Dadurch können auch ungenaue Werte entstehen. Beispielsweise deckt ein Integer mit 32 Bit alle ganze Zahlen zwischen -2.147.483.648 und 2.147.483.647 ab, während eine 32-Bit Fließkommazahl diese Bits in Exponent und Mantisse aufteilt, um dynamisch einen möglichst großen Bereich an Zahlen abzudecken. Dieser Datentyp kann hierbei wesentlich größere, oder kleinere Zahlen darstellen als ein 32-Bit Integer, weist aber genau dann, oder bei Zahlen, mit besonders vielen Nachkommastellen, Lücken auf. Da reelle Zahlen zu dem \texttt{dicht liegen}, was bedeutet, dass zwischen allen zwei reellen Zahlen immer eine weitere reelle Zahl gefunden werden kann, ist es sonst auch gar nicht möglich einen Datentyp zu definieren, der einen beliebigen Zahlenbereich in den reellen Zahlen unter Verwendung einer fixen Speichergröße abdeckt.
+
+\subsection{Was versteht man unter konzeptioneller Integrität?}
+Was ist also unter konzeptioneller zu Verstehen?
+Den Grad von Kohäsion und Widerspruchsfreiheit von Anforderungen, die ein System in sich vereinen muss. Kohäsion bedeutet hierbei, wie eng die Anforderungen der Software zueinander in Beziehung stehen.
+
+
+\subsection{Smartphone-Betriebssysteme}
+
+\subsection{Anwendungs-Suites}
+
+\section{Aristocracy and Democracy}
+Die konzeptionelle Integrität schreibt vor, dass der Entwurf von einem einzigen Kopf oder von einer sehr kleinen Anzahl übereinstimmender Köpfe ausgehen muss.
+Der Zeitdruck diktiert jedoch, dass der Systemaufbau viele Hände braucht. Es gibt zwei Möglichkeiten, dieses Dilemma zu lösen. Die erste ist eine sorgfältige Arbeitsteilung zwischen Architektur und Implementierung. Die zweite ist die neue Art der Strukturierung von Programmier-Implementierungsteams, die im vorigen Kapitel besprochen wurde.
+Die Trennung von architektonischem Aufwand und Implementierung ist eine sehr wirksame Methode, um konzeptionelle Integrität bei sehr großen Projekten zu erreichen.
+Der Architekt eines Systems ist, wie der Architekt eines Gebäudes, der Vertreter des Benutzers. Seine Aufgabe ist es, sein fachliches und technisches Wissen im uneingeschränkten Interesse des Benutzers einzubringen, im Gegensatz zu den Interessen des Verkäufers, des Herstellers usw. Die Architektur muss sorgfältig von der Umsetzung unterschieden werden. Wie Blaauw sagte: "Während die Architektur sagt, was geschieht, sagt die Implementierung, wie es geschieht". Als einfaches Beispiel nennt er eine Uhr, deren Architektur aus dem Zifferblatt, den Zeigern und dem Aufziehknopf besteht. Wenn ein Kind diese Architektur erlernt hat, kann es die Zeit an einer Armbanduhr ebenso leicht ablesen wie an einem Kirchturm. Die Umsetzung und die Verwirklichung beschreiben jedoch, was im Inneren des Gehäuses vor sich geht: die Energieversorgung durch einen von vielen Mechanismen und die Kontrolle der Genauigkeit durch einen von vielen.
+
+\section{Wischiwaschi-Metrik}
+\section{Konzeptionelle Integrität bei Scrum}
+\section{Fazit}
+
+\bibliographystyle{plain}
+\bibliography{sources}
+\end{document}

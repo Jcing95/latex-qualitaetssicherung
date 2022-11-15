@@ -1,1 +1,1 @@
-# latex-qualitaetssicherung
+# Aristocracy, Democracy, and System Design
