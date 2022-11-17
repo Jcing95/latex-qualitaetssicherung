@@ -126,7 +126,7 @@ Den Grad von Kohäsion und Widerspruchsfreiheit von Anforderungen, die ein Syste
 Kohäsion ist hierbei ein Maß, das beschreibt, wie eng die Anforderungen der Software zueinander in Beziehung stehen. Ein Programm, dessen Anforderung also möglichst präzise einen gewissen Aufgabenbereich abdecken weist hierbei eine hohe konzeptionelle Integrität auf, während ein Programm, dass möglichst viele Zwecke abdecken soll, die nicht oder kaum miteinander in Verbindung stehen, eine niedrige konzeptionelle Integrität aufweist.
 
 \subsection{Beispiele für konzeptionelle Integrität}
-Folgende Beispiele sollen die konzeptionelle Integrität für das Verständnis greifbarer gestalten:
+Folgende Beispiele sollen die konzeptionelle Integrität, nach der Definition einer hohen Kohäsion mit Widerspruchsfreiheit, für das Verständnis greifbarer gestalten.
 
 \subsubsection{Kundendaten}
 Angenommen, es gibt eine API-Schnittstelle, die das Geburtsdatum eines Kunden in drei Parametern erwartet. Auf dem Kontaktformular der Registrierung gibt es aber nur ein Feld, welches noch dazu kein Format für das Datum an sich vorschreibt. Hier entsteht ein offensichtlicher Widerspruch zwischen den zwei Schnittstellen, welcher für den Entwickler einen erheblichen Aufwand bedeutet, da er entweder das undefinierte Datum in der Eingabemaske in das klar definierte Format der API-Schnittstelle konvertieren, oder die Eingabemaske im Kontaktformular anpassen muss. Hier ist eine konzeptionelle Integrität also nicht gegeben, es entstehen ungeplante Aufgaben und es werden Mehrkosten erzeugt, die man mit einer besseren Planung vermeiden hätte können.
@@ -139,8 +139,25 @@ Bei gängigen Smartphone-Betriebssystemen wie beispielsweise iOS oder Android ex
 
 \subsection{Anwendungs-Suites}
 Große Softwareangebote, wie beispielsweise Microsoft Office, oder die Adobe Creative Cloud bieten viele verschiedene Programme, die zueinander in einem gewissen Kontext stehen in einem Gesamtpaket an. Hierbei ist es, im Sinne der konzeptionellen Integrität, dieses Angebot in verschiedene Anwendungen zu unterteilen, statt zu versuchen, eine Art eierlegende Wollmilchsau zu entwickeln. Dies minimiert die Komplexität der Projekte massiv und spart dadurch bei der Konzeption und Implementierung dieser Programme an Zeit. Außerdem ist es dadurch möglich Teams auf die verschiedenen Anwendungen zu verteilen, in denen sich diese dann besser einfinden können. Auch für die Nutzer ist es wesentlich leichter eine dieser Anwendungen zu lernen, beziehungsweise ist die Nutzung wesentlich zweckgebundener, und es muss sich nicht vor dem Start der Arbeit mit diesem Programm durch etliche Menüs geklickt werden, um den gewollten Arbeitsmodus einzustellen. Diese Herangehensweise kann allerdings auch zu Problemen führen, die tatsächlich bei beiden dieser Beispiele gravierend sind. Durch die getrennte Entwicklung dieser Anwendungen kann die Anwendungsübergreifende konzeptionelle Integrität in dem Sinne in Mitleidenschaft gezogen werden, dass beispielsweise verschiedene Menübänder verwendet werden oder identische Funktionen in der einen Software an anderer Stelle gefunden werden, als in der anderen. Bei den meisten Adobe-Creative-Cloud-Anwendungen beispielsweise benötigt man für die Zoom-Funktion die Eingabekombination \texttt{Alt} + \texttt{Mausrad}, während man hierfür bei Adobe-Animate die Kombination \texttt{Strg} + \texttt{Mausrad} verwendet. Dies führt dann natürlich beim Benutzen der einen Software insbesondere dann zu Problemen, wenn man bereits mit der Herangehensweise aus den anderen Anwendungen vertraut ist.
+\subsection{Die Architekten}
+\texttt{Conceptual integrity in turn dictates that the design must proceed from one mind, or from a very small number of agreeing resonant minds.}
+Damit sagt Brooks mehr als deutlich, dass mit der konzeptionellen Integrität der Entwurf eines Produktes von mindestens einem oder bis hin zu einem kleinen Team aus Architekten stammen muss.
+Selbst 20 Jahren danach, im Jahr 1995, ist Brooks von dieser Idee überzeugt: 
+\texttt{Today I am more convinced than ever. Conceptual integrity is central to product quality. Having a system architect is the most important single step toward conceptual integrity.
+These principles are by no means limited to software systems, but to the design of any complex construct, whether a computer, an airplane, a Strategic Defense Initiative, a Global Positioning System.
+After teaching a software engineering laboratory more than 20 times, I came to insist that student teams as small as four people choose a manager and a separate architect. Defining distinct roles in such small teams may be a little extreme, but I have observed it to work well and to contribute to design success even for small teams.}
+Quelle:The Mythical Mann-Month: Essays on Software Engineering, Anniversary Edition (2nd Edition) by Frederick P. Brooks 1995 \\
+\\Dies sollte aber nicht bedeuten, dass man das gesamte Team bei dem Designprozess miteinbeziehen darf. Das Gegenteil ist der Fall! Den nur so kann Solidität und Qualität gewährleistet werden und somit in was ausgefeilteres umgewandelt werden.
+So ist es unter anderem auch die Aufgabe:
+\begin{itemize}
+    \item Welche Features Einzug ins Design finden, welche nachgereicht oder außen vor gelassen werden
+    \item Die Ideen des Teams auf tauglichkeit zu prüfen und ggf. mit Aufzunehmen
+    \item Die Komplexität und Kosten gering zu halten
+\end{itemize}
+Wie diese Teams zusammenarbeiten sollten kommt im kommenden Kapitel dieser Ausarbeitung dran.
+https://wiki.c2.com/?ConceptualIntegrity
 
-\section{Aristocracy and Democracy}
+ \section{Aristocracy and Democracy}
 Die konzeptionelle Integrität schreibt vor, dass der Entwurf von einem einzigen Kopf oder von einer sehr kleinen Anzahl übereinstimmender Köpfe ausgehen muss.
 Der Zeitdruck diktiert jedoch, dass der Systemaufbau viele Hände braucht. Es gibt zwei Möglichkeiten, dieses Dilemma zu lösen. Die erste ist eine sorgfältige Arbeitsteilung zwischen Architektur und Implementierung. Die zweite ist die neue Art der Strukturierung von Programmier-Implementierungsteams, die im vorigen Kapitel besprochen wurde.
 Die Trennung von architektonischem Aufwand und Implementierung ist eine sehr wirksame Methode, um konzeptionelle Integrität bei sehr großen Projekten zu erreichen.
