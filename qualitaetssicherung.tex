@@ -101,13 +101,16 @@ Was ist also unter konzeptioneller Integrität zu Verstehen?
 Den Grad von Kohäsion und Widerspruchsfreiheit von Anforderungen, die ein System in sich vereinen muss. Kohäsion bedeutet hierbei, wie eng die Anforderungen der Software zueinander in Beziehung stehen.
 
 \subsection{Beispiele für konzeptionelle Integrität}
+Folgende Beispiele sollen die konzeptionelle Integrität für das Verständnis greifbarer gestalten.
 
 \subsubsection{Kundendaten}
-Angenommen es gibt eine API-Schnittstelle die das Geburtsdatum eines Kundens in drei Parametern übergeben haben möchte. Auf dem Kontakformular der Registrierung gibt es aber nur ein Feld, der auch noch keinen Datum-Format vorschreibt. Dies ist ein offensichtlichter Widerspruch zwischen den zwei Schnittstellen, der für den Entwickler Aufwand bedeuted um die Formate richtig zu konvertieren. Hier ist die konzeptionelle Integrität offensichtlich nicht gegeben und verursacht dadurch Mehrkosten.
+Angenommen, es gibt eine API-Schnittstelle, die das Geburtsdatum eines Kunden in drei Parametern übergeben haben möchte. Auf dem Kontaktformular der Registrierung gibt es aber nur ein Feld, der auch noch kein Format für das Datum an sich vorschreibt. Dies ist ein offensichtlicher Widerspruch zwischen den zwei Schnittstellen, der für den Entwickler Aufwand bedeutet, um die Formate richtig zu konvertieren. Hier ist die konzeptionelle Integrität offensichtlich nicht gegeben und verursacht dadurch Mehrkosten.
 
 \subsubsection{Bestellsystem}
-Ein externes System soll nur fünstellige Postleitzahlen akzeptieren. Dabei ist eine Anforderung, dass Bestellungen aus der Schweiz möglich sein sollten. Nun liegt das Problem in der Vierstelligkeit der Postleitzahl die in der Schweiz nunmal üblich ist. Die Erschwernis folgt nun aus dem Code des externen Systems und der Anforderungsdokumentation die einander nicht widersprechen sollten, da sonst die Verständlichkeit des Systems leidet.
+Ein externes System soll nur fünfstellige Postleitzahlen akzeptieren. Dabei ist eine Anforderung, dass Bestellungen aus der Schweiz möglich sein sollten. Nun liegt das Problem in der Vierstelligkeit der Postleitzahl, die in der Schweiz nun mal üblich ist. Die Erschwernis folgt jetzt aus dem Code des externen Systems und der Anforderungsdokumentation, die einander nicht widersprechen sollten, da sonst die Verständlichkeit des Systems leidet.
 
+\subsubsection{Einheitlichkeit}
+Ein Beispiel, den vielleicht der ein oder andere sogar erfahren hat, wäre die Einheitlichkeit eines Betriebssystems. Für dieses Beispiel nehmen wir speziell die Betriebssysteme aus aktuellen Smartphones. So ist es in der Menüführung für IOS-Nutzer natürlich und sehr intuitiv, in einer Anwendung, mit einem Tipp auf die obere linke Bildschirmecke wieder eine Ebene zurückzukommen. Für Android-Nutzer liegt diese Funktion unten links. Wenn dann plötzlich diese Funktion in einer App eines Drittherstellers anders aufgebaut ist, bricht es die gefühlte Intuition des Benutzers und er muss sich wieder neu orientieren. Diese Designentscheidung wirkt für den Nutzer schlecht durchdacht sowie aus dem Kontext gerissen. Hier wurden Designanforderungen nicht richtig verstanden, da die Anwendungen nicht richtig in ihrer Laufumgebung angepasst wurde.\\
 \subsection{Smartphone-Betriebssysteme}
 
 \subsection{Anwendungs-Suites}
@@ -119,42 +122,74 @@ Die Trennung von architektonischem Aufwand und Implementierung ist eine sehr wir
 Der Architekt eines Systems ist, wie der Architekt eines Gebäudes, der Vertreter des Benutzers. Seine Aufgabe ist es, sein fachliches und technisches Wissen im uneingeschränkten Interesse des Benutzers einzubringen, im Gegensatz zu den Interessen des Verkäufers, des Herstellers usw. Die Architektur muss sorgfältig von der Umsetzung unterschieden werden. Wie Blaauw sagte: "Während die Architektur sagt, was geschieht, sagt die Implementierung, wie es geschieht". Als einfaches Beispiel nennt er eine Uhr, deren Architektur aus dem Zifferblatt, den Zeigern und dem Aufziehknopf besteht. Wenn ein Kind diese Architektur erlernt hat, kann es die Zeit an einer Armbanduhr ebenso leicht ablesen wie an einem Kirchturm. Die Umsetzung und die Verwirklichung beschreiben jedoch, was im Inneren des Gehäuses vor sich geht: die Energieversorgung durch einen von vielen Mechanismen und die Kontrolle der Genauigkeit durch einen von vielen.
 
 \section{Wischiwaschi}
-Die Definition der widerspruchsfreien Anforderungen mit hoher Kohärez ist schwierig greifbar und macht es problemmatisch die Integrität an sich zu messen.
-Eine gute Alternative, um die Integrität deutlicher zu machen wäre die Abewesenheit von dieser festzustellen. Für diese Ausarbeitung haben wir uns für den Begriff 'Wischiwaschi' entschieden, da er auch in unserer Quelle so Verwendung findet und uns auch etwas passend scheint. Indikatoren für Wischiwaschi wären: \\
+Die Definition der widerspruchsfreien Anforderungen mit hoher Kohärenz ist schwierig greifbar und macht es problematisch, die Integrität an sich zu messen.
+Eine gute Alternative, um die Integrität deutlicher zu machen, wäre die Abwesenheit von dieser festzustellen. Für diese Ausarbeitung haben wir uns für den Begriff 'Wischiwaschi' entschieden, da er auch in unserer Quelle so Verwendung findet und uns auch etwas passend scheint. Indikatoren für Wischiwaschi wären: \\
 \begin{itemize}
-    \item Unklare, widersprüchliche oder mehrdeutige Anforderungen\\
-Beispiele für diesen Punkt sind nicht verstandene oder schlecht erklärte User Storys oder Roadmaps. 
-    \item Lange Abstimmungsrunden\\
+\item Unklare, widersprüchliche oder mehrdeutige Anforderungen\\
+Beispiele für diesen Punkt sind nicht verstandene oder schlecht erklärte User Storys oder Roadmaps.
+\item Lange Abstimmungsrunden\\
 Gründe wären zu lange Diskussionen, zu viele Verständnisfragen oder Erklärungen zum Projekt
-    \item Hohe Änderungsraten\\
-Wenn sich die Anforderungen in einer hohen Frequenzen ändern und der aktuelle Entwicklungsstand dementsprechend aktualisert werden muss. Beispiele wären von Anfang an unklare Anforderungen die während der Projektlaufzeit spezifiziert werden.
-    \item Explodierende Kosten\\
-Da die tatsächliche Kosten die der geplanten Kosten übersteigen ist es möglich, dass die Projektplanung, aufgrund falsch verstandener Anforderungen, schief gelaufen ist.
-    \item Projektverzug\\
-Gründe können für ein Projektverzug sein, dass die Aufwandschätzungen, wegen mangel an Verständnis für das Projekt, einfach schlecht waren.
-    \item Hohe Komplexität\\
-Es werden im Team viele Fehler gemacht oder das Verstehen des Projektes scheint schwer zu sein. So steigt die Schieflage immer mehr je mehr Anforderungen an das Projekt gestellt werden.
-    \item Schlechte Performance\\
-Die Performance ist daher ein Indiz da das Projekt für die Anwendung ungeeignete oder falsche Werkzeuge nutzt. Mögliche Gründe wären hier zu hohe Änderungsraten, bei denen dann die Werkzeuge nicht optimiert oder ausgetauscht wurden. Auch eine falsches Verstädnis vom Projekt könnte eine falsche Annahme der benötigten Mittel herbeiführen.\\
-Ein weiterer Grund könnte die unnötige Komplexität des Projektes sein. Funktionen die sich gegenseitig beeinflusen und somit die Performance reduzieren.
-    \item Hohe Lernkurve der Anwendung\\
-Hohe Lernkurven können passieren aufgrund nicht durchdachtem Design der Anwendung. Ursachen dafür könnten schlecht verstandene Anforderungen die zu einem schlechten Designkonzept führen.
+\item Hohe Änderungsraten\\
+Wenn sich die Anforderungen in einer hohen Frequenz ändern und der aktuelle Entwicklungsstand dementsprechend aktualisiert werden muss. Beispiele wären von Anfang an unklare Anforderungen, die während der Projektlaufzeit spezifiziert werden.
+\item Explodierende Kosten\\
+Da die tatsächlichen Kosten die der geplanten Kosten übersteigen ist es möglich, dass die Projektplanung, aufgrund falsch verstandener Anforderungen, schiefgelaufen ist.
+\item Projektverzug\\
+Gründe können für ein Projektverzug sein, dass die Aufwandsschätzungen, wegen mangel an Verständnis für das Projekt, einfach schlecht waren.
+\item Hohe Komplexität\\
+Es werden im Team viele Fehler gemacht oder das Verstehen des Projektes scheint schwer zu sein. So steigt die Schieflage immer mehr, je mehr Anforderungen an das Projekt gestellt werden.
+\item Schlechte Performance\\
+Die Performance ist daher ein Indiz, da das Projekt für die Anwendung ungeeignete oder falsche Werkzeuge nutzt. Mögliche Gründe wären hier zu hohe Änderungsraten, bei denen dann die Werkzeuge nicht optimiert oder ausgetauscht wurden. Auch ein falsches Verständnis vom Projekt könnte eine falsche Annahme der benötigten Mittel herbeiführen.\\
+Ein weiterer Grund könnte die unnötige Komplexität des Projektes sein. Funktionen, die einander beeinflussen und somit die Performance reduzieren.
+\item Hohe Lernkurve der Anwendung\\
+Hohe Lernkurven können passieren aufgrund nicht durchdachtem Design der Anwendung. Ursachen dafür könnten schlecht verstandene Anforderungen, die zu einem schlechten Designkonzept führen.
 \end{itemize}
 \section{Maßnahmen gegen Wischiwaschi}
-Um diese Problematiken zu lösen gibt es mehrere Ansatzpunkte die wir in Folge erklären.
-\subsection{Klare Defintion der Geschäftsziele}
-Klare Defintion der Geschäftsziele die das System unterstützen muss.
-\subsection{Contentstrategie}
-Die Contentstrategie schlägt die Brücke zwischen der Geschäftsstrategie und Ihrem Contentmodell.
+Um diese Problematiken zu lösen gibt es mehrere Ansatzpunkte, die wir in Folge erklären.
+\subsection{Anforderungsmanagement}
+Mit Anforderungsmanagement ist hier die Methode der Aufnahme und Kommunikation der Anforderungen gemeint.
+Anforderungen müssen klar, widerspruchsfrei und eindeutig vom Auftraggeber formuliert werden. Sie sind die Grundsteine, damit das Projekt später die konzeptionelle Integrität erfüllt. Um möglichst gute Anforderungen zu erhalten, gibt es Kriterien, die beachtet werden müssen:
+\begin{itemize}
+\item Abgestimmt:\\
+Anforderungen müssen mit allen Stakeholdern abgestimmt werden. Stakeholder müssen die Anforderung als korrekt und notwendig erachten.
+\item Eindeutig:\\
+Alle Leser müssen beim Studium der Anforderung zum selben Ergebnis kommen. Eine Mehrfachinterpretation sollte nicht möglich sein. Dies ist aufgrund der Mehrdeutigkeit von Sprache sehr schwierig und benötigt viel Erfahrung und Präzision im Schriftlichen. Dies spricht auch für den Bezug auf ein konkretes Lösungsdesign (zum Beispiel in Form eines Prototyps), denn nur dann können die Anforderungen von allen gleich interpretiert werden.
+\item Notwendig:\\
+Anforderungen müssen den Gegebenheiten im Kontext entsprechen. Eine Gegebenheit kann die Erwartung eines Stakeholders sein oder die API-Spezifikation eines externen Dienstes.
+\item Konsistent:\\
+Anforderungen müssen sowohl in sich selbst als auch im Vergleich mit anderen Anforderungen konsistent sein. Es darf also keine Widersprüche geben.
+\item Prüfbar:\\
+Anforderungen müssen überprüfbar sein, damit man später feststellen kann, ob sie umgesetzt wurden. Zur Überprüfung eignen sich Tests oder Messungen.
+\item Realisierbar:\\
+Nicht jede Anforderung ist im geforderten Budget umsetzbar. Dies ist besonders schwierig, wenn bei den Stakeholdern wenig technisches Verständnis vorhanden ist.
+\item Verfolgbar:\\
+Der Ursprung der Anforderung muss angegeben werden. Zudem sollte jede Anforderung einen eindeutigen Identifikator haben, damit sie referenziert werden kann.
+\item Vollständig:\\
+Anforderungen müssen vollständig sein, d. h. die gewünschte Funktionalität in Gänze beschreiben.
+\item Verständlich:\\
+Die Anforderungen müssen von allen Stakeholdern verstanden werden können. Um dies zu erreichen, sollten sie entweder in der Allgemeinsprache formuliert werden oder es müssen Begriffe in einem Glossar genau erklärt werden.
+\end{itemize}
 \subsection{Werkzeuge/Tools}
-Werkzeuge zu unterstützung von strukturierte Ablage sowie Änderungsprozessen.\
-
+\begin{itemize}
+\item Visualisierungen\\
+Mithilfe von Grafiken festigt sich das Verständnis für die Anforderungen und klärt somit Widersprüche im Projekt besser auf. Selbst User Storys können helfen, auch wenn sie einem trivial vorkommen kann es jemanden anderem im Team, der nicht auf dem Stand ist, helfen.
+\item Application-Lifecycle-Management-Werkzeuge\\
+Die Anforderungen müssen möglichst widerspruchsfrei und kohärent bleiben, auch bei Änderungen. Da dies durch viele Informationen und hohe Änderungsfrequenz schwierig ist, können wir uns sogenannte Application-Lifecycle-Management-Werkzeuge (ALM-Werkzeuge) zur Hilfe nehmen. Diese unterstützen die strukturierte Ablage sowie Änderungsprozesse der Informationen gut.\
+\item Taxonomie-Software\\
+Es hilft eine große Menge von Anforderungen nach zu Strukturen zu definieren. So können über so eine Software diese Anforderungen gruppiert und nach bedarf jederzeit wiedergefunden werden.
+\item Wiki-Software\\
+So brauchen manche Entwicklungen, vor allem die mittelgroßen bis großen Projekte, mehrere Seiten an Dokumentationen. Teilweise können diese Dokumentationen für die Mitarbeiter unübersichtlich werden und dazu führen, dass die Softwareentwicklung so ins Stocken kommt. Um dies zu verhindern, muss geschaut werden, dass die wichtigen Informationen auf eine zugängliche Art und Weise dokumentiert als auch aktualisiert werden, um Fehlinformationen oder Missinterpretationen zu minimieren.
+\end{itemize}
 \section{Vorteile hoher konzeptioneller Integrität}
 \subsection{Wartbarkeit/Änderbarkeit}
+Je konsistenter die Anforderungen und je klarer die Ziele und Epics, desto einfacher ist es, Änderungen an den Anforderungen einzubringen, und die entsprechenden Anpassungen an der Software vorzunehmen. Daraus folgt, dass die Software auch länger in Betrieb gehalten werden kann, da sie sich besser anpassen lässt.
 \subsection{Bedienbarkeit/Erlernbarkeit}
+Je schlüssiger die Funktionen eines Systems für die Benutzer sind, desto einfacher lassen sie sich auch erlernen.
 \subsection{Angepasste Komplexität}
+Da Ihr System gut durchdacht ist und eine hohe Kohäsion hat, entsteht keine unnötige Komplexität. Das System kann mit einem optimalen Komplexitätsgrad gebaut werden.
 \subsection{Performance}
+Unnötige Komplexität in der Source kann Auswirkungen auf die Performance haben. Da keine unnötige Komplexität entstehen muss, ist der Grundstein für eine gute Performance gelegt.
 \subsection{Planbarkeit}
+Da die Features und ihre Abbildung auf die Software vom Team gut verstanden werden, sind auch die Aufwandschätzungen gut. Die Planbarkeit nimmt zu.
 \section{Konzeptionelle Integrität bei Scrum}
 \section{Fazit}
 
