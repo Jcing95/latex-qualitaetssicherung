@@ -92,12 +92,26 @@ Aber was haben Kathedralen mit der Entwicklung von Softwareprojekten zu tun? Typ
 \pagebreak
 \section{Konzeptionelle Integrität}
 \subsection{Definition Integrität}
-Der Begriff konzeptionelle Integrität ist in keiner Literatur definiert. Selbst in keiner ISO-Norm zur Softwarequalität lässt sich der Begriff finden. Was sich aber finden lässt, ist eine Definition des Begriffs Integrität. Die mehrfach belegte Bedeutung macht es zu einem Homonym und ist dementsprechend nicht immer auf Anhieb passend zu verstehen, da sie von Themenfeld zu Themenfeld anders ausgelegt werden kann. Für unser Verständnis müssen wir den Begriff der Integrität aus der lateinischen Sprache übersetzen, die sich in unversehrt, intakt oder vollständig deuten lässt. Die Bedeutung dieser Vollständigkeit brauchen wir in unserem Kontext. 
+Der Begriff konzeptionelle Integrität ist in keiner Literatur definiert. 
+Selbst in keiner ISO-Norm zur Softwarequalität lässt sich der Begriff finden. 
+Was sich aber finden lässt, ist eine Definition des Begriffs Integrität. 
+Die mehrfach belegte Bedeutung macht es zu einem Homonym und ist dementsprechend nicht immer auf Anhieb passend zu verstehen, da sie von Themenfeld zu Themenfeld anders ausgelegt werden kann. 
+Für unser Verständnis müssen wir den Begriff der Integrität aus der lateinischen Sprache übersetzen, die sich in unversehrt, intakt oder vollständig deuten lässt. 
+Weiter kann man das Wort 'Integrität' mit der Idee des 'Integriert sein' oder 'Eins-sein' in Verbindung bringen.
+Die Idee eines Ganzen spiegelt sich in der Art und Weise wieder, wie 'Integrität' verwendet wird, um etwas
+zu beschreiben, das immer mit den eigenen Erwartungen übereinstimmt.
+Wir bezeichnen etwas als
+begrifflich 'integer', wenn die aus unserer Erfahrung mit der Sache gebildeten
+Konzepte die zukünftigen Ereignisse, die mit der Sache verbunden sind, zuverlässig
+bestimmen können und somit Überrschungen ausschließen.
 \subsection{Integer vs. Float}
 Wir versuchen anhand dieser beiden Datentypen den Begriff Integrität noch einmal klarer darzustellen. Der Datentyp speichert nur ganze Zahlen, ohne Zwischenwerte. Er bildet also einen bestimmten Zahlenbereich innerhalb der ganzen Zahlen vollständig ab und bietet damit eine gewisse Abgeschlossenheit. Ein gutes Gegenbeispiel ist der Datentyp Float. Dieser bildet reelle Zahlen ab. Dieser Datentyp lässt also im Gegensatz zu ganzen Zahlen auch gebrochene Zahlen zu. Dadurch können auch ungenaue Werte entstehen. Beispielsweise deckt ein Integer mit 32 Bit alle ganze Zahlen zwischen -2.147.483.648 und 2.147.483.647 ab \cite{dewiki:integer}, während eine 32-Bit Fließkommazahl diese Bits in Exponent und Mantisse aufteilt, um dynamisch einen möglichst großen Bereich an Zahlen abzudecken. Dieser Datentyp kann hierbei wesentlich größere, oder kleinere Zahlen darstellen als ein 32-Bit Integer, weist aber genau dann, oder bei Zahlen, mit besonders vielen Nachkommastellen, Lücken auf. \cite{dewiki:float} Da reelle Zahlen zu dem \texttt{dicht liegen}, was bedeutet, dass zwischen allen zwei reellen Zahlen immer eine weitere reelle Zahl gefunden werden kann, ist es sonst auch gar nicht möglich einen Datentyp zu definieren, der einen beliebigen Zahlenbereich in den reellen Zahlen unter Verwendung einer fixen Speichergröße abdeckt. 
 
 \subsection{Was versteht man unter konzeptioneller Integrität?}
-Was ist also unter konzeptioneller Integrität zu Verstehen?
+Brooks bringt die 'konzeptionelle Integrität' mit der 'Einheitlichkeit des
+Designs' in Verbindung, bietet aber keine weitere zufriedenstellende Erklärung
+dafür, was konzeptionelle Integrität ist. 
+Eine naheliegende Definition die wir in unseren deutschen Quellen gefunden haben ist diese hier:
 Den Grad von Kohäsion und Widerspruchsfreiheit von Anforderungen, die ein System in sich vereinen muss. Kohäsion bedeutet hierbei, wie eng die Anforderungen der Software zueinander in Beziehung stehen.
 
 \subsection{Beispiele für konzeptionelle Integrität}
