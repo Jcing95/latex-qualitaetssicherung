@@ -109,13 +109,13 @@ Wir versuchen anhand dieser beiden Datentypen den Begriff Integrität noch einma
 
 \subsection{Was versteht man unter konzeptioneller Integrität?}
 Brooks bringt die 'konzeptionelle Integrität' mit der 'Einheitlichkeit des
-Designs' in Verbindung, bietet aber keine weitere zufriedenstellende Erklärung
+System-Designs' in Verbindung, bietet aber keine weitere zufriedenstellende Erklärung
 dafür, was konzeptionelle Integrität ist. 
 Eine naheliegende Definition die wir in unseren deutschen Quellen gefunden haben ist diese hier:
 Den Grad von Kohäsion und Widerspruchsfreiheit von Anforderungen, die ein System in sich vereinen muss. Kohäsion bedeutet hierbei, wie eng die Anforderungen der Software zueinander in Beziehung stehen.
 
 \subsection{Beispiele für konzeptionelle Integrität}
-Folgende Beispiele sollen die konzeptionelle Integrität für das Verständnis greifbarer gestalten.
+Folgende Beispiele sollen die konzeptionelle Integrität, nach der Definition einer hohen Kohäsion mit Widerspruchsfreiheit, für das Verständnis greifbarer gestalten.
 
 \subsubsection{Kundendaten}
 Angenommen, es gibt eine API-Schnittstelle, die das Geburtsdatum eines Kunden in drei Parametern übergeben haben möchte. Auf dem Kontaktformular der Registrierung gibt es aber nur ein Feld, der auch noch kein Format für das Datum an sich vorschreibt. Dies ist ein offensichtlicher Widerspruch zwischen den zwei Schnittstellen, der für den Entwickler Aufwand bedeutet, um die Formate richtig zu konvertieren. Hier ist die konzeptionelle Integrität offensichtlich nicht gegeben und verursacht dadurch Mehrkosten.
@@ -128,8 +128,17 @@ Ein Beispiel, den vielleicht der ein oder andere sogar erfahren hat, wäre die E
 \subsection{Smartphone-Betriebssysteme}
 
 \subsection{Anwendungs-Suites}
-
-\section{Aristocracy and Democracy}
+\subsection{Die Architekten}
+\texttt{Conceptual integrity in turn dictates that the design must proceed from one mind, or from a very small number of agreeing resonant minds.}
+Damit sagt Brooks mehr als deutlich, dass mit der konzeptionellen Integrität der Entwurf eines Produktes von mindestens einem oder bis hin zu einem kleinen Team aus Architekten stammen muss.
+Selbst 20 Jahren danach, im Jahr 1995, ist Brooks von dieser Idee überzeugt: 
+\texttt{Today I am more convinced than ever. Conceptual integrity is central to product quality. Having a system architect is the most important single step toward conceptual integrity.
+These principles are by no means limited to software systems, but to the design of any complex construct, whether a computer, an airplane, a Strategic Defense Initiative, a Global Positioning System.
+After teaching a software engineering laboratory more than 20 times, I came to insist that student teams as small as four people choose a manager and a separate architect. Defining distinct roles in such small teams may be a little extreme, but I have observed it to work well and to contribute to design success even for small teams.}
+Quelle:The Mythical Mann-Month: Essays on Software Engineering, Anniversary Edition (2nd Edition) by Frederick P. Brooks 1995 \\
+\\Dies sollte aber nicht bedeuten, dass man das gesamte Team bei dem Designprozess miteinbeziehen darf. Das Gegenteil ist der Fall! Den nur so kann Solidität und Qualität gewährleistet werden und somit in was ausgefeilteres umgewandelt werden. Wie diese Teams zusammenarbeiten sollten kommt im kommenden Kapitel dieser Ausarbeitung dran.
+https://wiki.c2.com/?ConceptualIntegrity
+ \section{Aristocracy and Democracy}
 Die konzeptionelle Integrität schreibt vor, dass der Entwurf von einem einzigen Kopf oder von einer sehr kleinen Anzahl übereinstimmender Köpfe ausgehen muss.
 Der Zeitdruck diktiert jedoch, dass der Systemaufbau viele Hände braucht. Es gibt zwei Möglichkeiten, dieses Dilemma zu lösen. Die erste ist eine sorgfältige Arbeitsteilung zwischen Architektur und Implementierung. Die zweite ist die neue Art der Strukturierung von Programmier-Implementierungsteams, die im vorigen Kapitel besprochen wurde.
 Die Trennung von architektonischem Aufwand und Implementierung ist eine sehr wirksame Methode, um konzeptionelle Integrität bei sehr großen Projekten zu erreichen.
