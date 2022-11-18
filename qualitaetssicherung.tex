@@ -30,10 +30,9 @@
 \fancyhf{} % clear all header and footer fields
 \renewcommand{\headrulewidth}{0.4pt} % Obere Trennlinie
 \fancyfoot[C]{\thepage} 
-\fancyhead[R]{Qualitätssicherung}
 \fancyhead[L]{\leftmark}
 \setlength{\footskip}{50pt}
-
+\setlength{\parindent}{0pt}
 
 \begin{document}
 \begin{titlepage}
@@ -165,9 +164,14 @@ Bei dieser Arbeitsverteilung stellt sich dann schnell die Frage, ob hier eine Zw
     \item Sind die Architekten dann diejenigen, die den ganzen kreativen Spaß haben und somit den Programmierern ihren kreativen Erfindergeist rauben?
     \item Müssen die Programmierer warten, bis das kleine Team von Architekten die Spezifikationen fertiggestellt haben und entsteht hierdurch ein Leerlauf, bei dem diese keine Arbeit haben und dennoch bezahlt werden müssen?
 \end{itemize} 
+
 Zur ersten Frage verweist Brooks hier auf das nächste Kapitel, was wir an dieser Stelle auch tun wollen. Diese Gefahr ist tatsächlich real und wird dort tiefergehend behandelt.
-Die zweite Frage wird von ihm mit einem klaren Nein beantwortet. Es handle sich zunächst bei der Implementierung nicht um eine weniger kreative Arbeit, sondern um eine anders kreative Arbeit. Während die Architekten die Systemstruktur entwerfen und dabei gewisse Rahmenbedingungen schaffen, müssen die Programmierer innerhalb dieser die genaue Implementierung entwickeln, und dabei viele Probleme Lösen. Wie Blaauw sagte: "Während die Architektur sagt, was geschieht, sagt die Implementierung, wie es geschieht". Insbesondere der klar definierte Rahmen fördert dabei sogar die Kreativität, da man sich intensiv Gedanken machen muss, was der beste Weg ist, diese Probleme zu lösen, und nicht einfach nach irgend einem Weg sucht. Während neben der Laufzeit früher vor allem der verfügbare Speicherplatz eine große Einschränkung darstellte, ist dieser Heute typischerweise ein eher nebensächliches Problem. Da aber die Systeme heute in einem wesentlich größeren Maße genutzt werden, ist eine effiziente Laufzeit von großer Bedeutung. Dementsprechend ist auch die Größe der Daten, die verarbeitet werden müssen ein nach wie vor ein wichtiger Faktor. Man kann sich also auch heute, gerade an kritischen Stellen, nicht einfach für die angenehmste Lösung entscheiden, sondern profitiert nach wie vor stark von einer besonders effizienten Implementierung, sowohl was Datengröße angeht, als auch die Komplexität der Algorithmen in einem Laufzeittechnischen Kontext.
-Auch die letzte Frage wird ebenfalls klar mit einem Nein beantwortet. Während ein kleines Team von Architekten natürlich länger braucht, bis die gesamte Architektur fertiggestellt ist, müssen die Programmierer keinesfalls bis dahin warten um mit ihrer Arbeit beginnen. Sobald erste Informationen zu Features und Technologie bekannt sind und konkrete Kosten- und Performanceziele verfügbar sind können beispielsweise Tabellenstrukturen, Paketstrukturen oder allgemeine Algorithmen entworfen werden. Die Arbeitsaufteilung in Architektur, Implementierung und gegebenenfalls Realisierung bedeutet also nicht, dass die Umsetzung deshalb länger dauert, oder Angestellte im leerlauf Ressourcen verschwenden. 
+\\
+\\
+\noindent Die zweite Frage wird von ihm mit einem klaren Nein beantwortet. Es handle sich zunächst bei der Implementierung nicht um eine weniger kreative Arbeit, sondern um eine anders kreative Arbeit. Während die Architekten die Systemstruktur entwerfen und dabei gewisse Rahmenbedingungen schaffen, müssen die Programmierer innerhalb dieser die genaue Implementierung entwickeln, und dabei viele Probleme Lösen. Wie Blaauw sagte: "Während die Architektur sagt, was geschieht, sagt die Implementierung, wie es geschieht". Insbesondere der klar definierte Rahmen fördert dabei sogar die Kreativität, da man sich intensiv Gedanken machen muss, was der beste Weg ist, diese Probleme zu lösen, und nicht einfach nach irgend einem Weg sucht. Während neben der Laufzeit früher vor allem der verfügbare Speicherplatz eine große Einschränkung darstellte, ist dieser Heute typischerweise ein eher nebensächliches Problem. Da aber die Systeme heute in einem wesentlich größeren Maße genutzt werden, ist eine effiziente Laufzeit von großer Bedeutung. Dementsprechend ist auch die Größe der Daten, die verarbeitet werden müssen ein nach wie vor ein wichtiger Faktor. Man kann sich also auch heute, gerade an kritischen Stellen, nicht einfach für die angenehmste Lösung entscheiden, sondern profitiert nach wie vor stark von einer besonders effizienten Implementierung, sowohl was Datengröße angeht, als auch die Komplexität der Algorithmen in einem Laufzeittechnischen Kontext.
+\\
+\\
+\noindent Auch die letzte Frage wird klar mit einem Nein beantwortet. Während ein kleines Team von Architekten natürlich länger braucht, bis die gesamte Architektur fertiggestellt ist, müssen die Programmierer keinesfalls bis dahin warten um mit ihrer Arbeit beginnen. Sobald erste Informationen zu Features und Technologie bekannt sind und konkrete Kosten- und Performanceziele verfügbar sind können beispielsweise Tabellenstrukturen, Paketstrukturen oder allgemeine Algorithmen entworfen werden. Die Arbeitsaufteilung in Architektur, Implementierung und gegebenenfalls Realisierung bedeutet also nicht, dass die Umsetzung deshalb länger dauert, oder Angestellte im leerlauf Ressourcen verschwenden. 
 
 \section{Wischiwaschi}
 Die Definition der widerspruchsfreien Anforderungen mit hoher Kohärenz ist schwierig greifbar und macht es problematisch, die Integrität an sich zu messen.
