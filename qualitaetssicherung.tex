@@ -199,89 +199,98 @@ Um diese Problematiken zu lösen gibt es mehrere Ansatzpunkte, die wir in Folge 
 \subsection{Anforderungsmanagement}
 Mit Anforderungsmanagement ist hier die Methode der Aufnahme und Kommunikation der Anforderungen gemeint.
 Anforderungen müssen klar, widerspruchsfrei und eindeutig vom Auftraggeber formuliert werden. Sie sind die Grundsteine, damit das Projekt später die konzeptionelle Integrität erfüllt. Um möglichst gute Anforderungen zu erhalten, gibt es Kriterien, die beachtet werden müssen:
-\begin{itemize}
-\item Abgestimmt:\\
-Anforderungen müssen mit allen Stakeholdern abgestimmt werden. Stakeholder müssen die Anforderung als korrekt und notwendig erachten.
-\item Eindeutig:\\
-Alle Leser müssen beim Studium der Anforderung zum selben Ergebnis kommen. Eine Mehrfachinterpretation sollte nicht möglich sein. Dies ist aufgrund der Mehrdeutigkeit von Sprache sehr schwierig und benötigt viel Erfahrung und Präzision im Schriftlichen. Dies spricht auch für den Bezug auf ein konkretes Lösungsdesign (zum Beispiel in Form eines Prototyps), denn nur dann können die Anforderungen von allen gleich interpretiert werden.
-\item Notwendig:\\
-Anforderungen müssen den Gegebenheiten im Kontext entsprechen. Eine Gegebenheit kann die Erwartung eines Stakeholders sein oder die API-Spezifikation eines externen Dienstes.
-\item Konsistent:\\
-Anforderungen müssen sowohl in sich selbst als auch im Vergleich mit anderen Anforderungen konsistent sein. Es darf also keine Widersprüche geben.
-\item Prüfbar:\\
-Anforderungen müssen überprüfbar sein, damit man später feststellen kann, ob sie umgesetzt wurden. Zur Überprüfung eignen sich Tests oder Messungen.
-\item Realisierbar:\\
-Nicht jede Anforderung ist im geforderten Budget umsetzbar. Dies ist besonders schwierig, wenn bei den Stakeholdern wenig technisches Verständnis vorhanden ist.
-\item Verfolgbar:\\
-Der Ursprung der Anforderung muss angegeben werden. Zudem sollte jede Anforderung einen eindeutigen Identifikator haben, damit sie referenziert werden kann.
-\item Vollständig:\\
+
+\paragraph{Abgestimmtheit:}\mbox{} \\
+Anforderungen müssen mit allen Stakeholdern abgestimmt werden.
+Stakeholder müssen die Anforderung als korrekt und notwendig erachten.
+Dies vermeidet widersprüchliche Anforderungen.
+\paragraph{Eindeutigkeit:}\mbox{} \\
+Alle Leser müssen beim Studium der Anforderung zum selben Ergebnis kommen. 
+Eine Mehrfachinterpretation sollte somit nicht möglich sein.
+Dies spricht auch für den Bezug auf ein konkretes Lösungsdesign (zum Beispiel in Form eines Prototyps), denn nur dann können die Anforderungen von allen gleich interpretiert werden.
+\paragraph{Notwendigkeit:}\mbox{} \\
+Anforderungen müssen den Gegebenheiten im Kontext entsprechen. 
+Eine Gegebenheit kann die Erwartung eines Stakeholders sein oder die API-Spezifikation eines externen Dienstes.
+\paragraph{Konsistenz:}\mbox{} \\
+Anforderungen müssen sowohl in sich selbst als auch im Vergleich mit anderen Anforderungen konsistent sein. 
+Es darf also keine Widersprüche geben.
+\paragraph{Prüfbarkeit:}\mbox{} \\
+Anforderungen müssen überprüfbar sein, damit man später feststellen kann, ob sie umgesetzt wurden. 
+Zur Überprüfung eignen sich Tests oder Messungen.
+\paragraph{Realisierbarkeit:}\mbox{} \\
+Nicht jede Anforderung ist im geforderten Budget umsetzbar. 
+Dies ist besonders schwierig, wenn bei den Stakeholdern wenig technisches Verständnis vorhanden ist.
+\paragraph{Verfolgbarkeit:}\mbox{} \\
+Der Ursprung der Anforderung muss angegeben werden. 
+Zudem sollte jede Anforderung einen eindeutigen Identifikator haben, damit sie referenziert werden kann.
+\paragraph{Vollständigkeit:}\mbox{} \\
 Anforderungen müssen vollständig sein, d. h. die gewünschte Funktionalität in Gänze beschreiben.
-\item Verständlich:\\
-Die Anforderungen müssen von allen Stakeholdern verstanden werden können. Um dies zu erreichen, sollten sie entweder in der Allgemeinsprache formuliert werden oder es müssen Begriffe in einem Glossar genau erklärt werden.
-\end{itemize}
+\paragraph{Verständlichkeit:}\mbox{} \\
+Die Anforderungen müssen von allen Stakeholdern verstanden werden können. 
+Um dies zu erreichen, sollten sie entweder in der Allgemeinsprache formuliert werden oder es müssen Begriffe in einem Glossar genau erklärt werden.
+
 
 \subsection{Werkzeuge/Tools}
-\begin{itemize}
-\item Visualisierungen\\
+
+\paragraph{Visualisierungen}\mbox{} \\
 Mithilfe von Grafiken festigt sich das Verständnis für die Anforderungen und klärt somit Widersprüche im Projekt besser auf. Selbst User Storys können helfen, auch wenn sie einem trivial vorkommen kann es jemanden anderem im Team, der nicht auf dem Stand ist, helfen.
-\item Application-Lifecycle-Management-Werkzeuge\\
+\paragraph{Application-Lifecycle-Management-Werkzeuge}\mbox{} \\
 Die Anforderungen müssen möglichst widerspruchsfrei und kohärent bleiben, auch bei Änderungen. Da dies durch viele Informationen und hohe Änderungsfrequenz schwierig ist, können wir uns sogenannte Application-Lifecycle-Management-Werkzeuge (ALM-Werkzeuge) zur Hilfe nehmen. Diese unterstützen die strukturierte Ablage sowie Änderungsprozesse der Informationen gut.\
-\item Taxonomie-Software\\
+\paragraph{Taxonomie-Software}\mbox{} \\
 Es hilft eine große Menge von Anforderungen nach zu Strukturen zu definieren. So können über so eine Software diese Anforderungen gruppiert und nach bedarf jederzeit wiedergefunden werden.
-\item Wiki-Software\\
+\paragraph{Wiki-Software}\mbox{} \\
 So brauchen manche Entwicklungen, vor allem die mittelgroßen bis großen Projekte, mehrere Seiten an Dokumentationen. Teilweise können diese Dokumentationen für die Mitarbeiter unübersichtlich werden und dazu führen, dass die Softwareentwicklung so ins Stocken kommt. Um dies zu verhindern, muss geschaut werden, dass die wichtigen Informationen auf eine zugängliche Art und Weise dokumentiert als auch aktualisiert werden, um Fehlinformationen oder Missinterpretationen zu minimieren.
-\end{itemize}
+
 
 \section{Vorteile hoher konzeptioneller Integrität}
-\subsection{Wartbarkeit/Änderbarkeit}
+\paragraph{Wartbarkeit/Änderbarkeit}\mbox{} \\
 Je konsistenter die Anforderungen und je klarer die Ziele und Epics, desto einfacher ist es, Änderungen an den Anforderungen einzubringen, und die entsprechenden Anpassungen an der Software vorzunehmen. Daraus folgt, dass die Software auch länger in Betrieb gehalten werden kann, da sie sich besser anpassen lässt.
-\subsection{Bedienbarkeit/Erlernbarkeit}
+\paragraph{Bedienbarkeit/Erlernbarkeit}\mbox{} \\
 Je schlüssiger die Funktionen eines Systems für die Benutzer sind, desto einfacher lassen sie sich auch erlernen.
-\subsection{Angepasste Komplexität}
+\paragraph{Angepasste Komplexität}\mbox{} \\
 Da Ihr System gut durchdacht ist und eine hohe Kohäsion hat, entsteht keine unnötige Komplexität. Das System kann mit einem optimalen Komplexitätsgrad gebaut werden.
-\subsection{Performance}
+\paragraph{Performance}\mbox{} \\
 Unnötige Komplexität in der Source kann Auswirkungen auf die Performance haben. Da keine unnötige Komplexität entstehen muss, ist der Grundstein für eine gute Performance gelegt.
-\subsection{Planbarkeit}
+\paragraph{Planbarkeit}\mbox{} \\
 Da die Features und ihre Abbildung auf die Software vom Team gut verstanden werden, sind auch die Aufwandschätzungen gut. Die Planbarkeit nimmt zu.
 
 \section{Konzeptionelle Integrität im Scrum-Prozess}
 Heutzutage ist Scrum sehr weit verbreitet in der Informatik. Da stellt sich dann natürlich die Frage, auch wenn Brook meinte, dass das Design von einer Gruppe von Architekten designt wird,
 ob die konzeptionelle Integrität auch in Scrum erfüllbar wäre? Wir meinen Ja, in einer etwas abgewandelten Form. So gibt es einen Architekten im Team, der meisten spezielle Eigenschaften erfüllt.
-\begin{itemize}
-    \item Der Architekt hat bezüglich Architektur technische Fragen das letzte Wort im Team \\
+
+    \paragraph{Der Architekt hat bezüglich Architektur technische Fragen das letzte Wort im Team}\mbox{} \\
     Der Architekt hört sich Vorschläge an, die vom Team kommen und entscheidet ob diese Vorschläge implementiert werden.
-    \item Der Architekt gehört zum Projekt und stiftet dem Projekt Nutzen.\\
+    \paragraph{Der Architekt gehört zum Projekt und stiftet dem Projekt Nutzen.}\mbox{} 
     Häufig, aber nicht immer, kommt es vor, dass der Architekt im Team selbst ist und sogar auch selbst programmiert.
     In dem Fall ist er auch aktiv an der Entwicklung beteiligt und oft eine Mentorfigur (Senior oder Ausbilder) der mit Tipps und Ratschlägen im Team helfen kann.
-    \item Architekt kann auch der Produkt Owner selbst sein
-    \item Entscheidungen für das Projekt trifft er selbst unter der Beachtung von Vorgaben.
-    Diese Vorgaben können Ressourcen, geplante Termine oder vorhandene Technologien sein.
-\end{itemize}
+    \paragraph{Architekt kann auch der Produkt Owner selbst sein}\mbox{} 
+    \paragraph{Entscheidungen für das Projekt trifft er selbst unter der Beachtung von Vorgaben.}\mbox{} \\
+    Diese Vorgaben können Ressourcen, geplante Termine oder vorhandene Technologien sein.\\
+
 Unabhängig vom Architekt ist Scrum auch ein gutes Konzept, um sowohl im Team als auch außerhalb des Teams transparenz zu schaffen. 
 Dies ermöglicht frühzeitig schieflagen im Projekt zu erkennen und zu lösen. Auch erhöht es den Erfolg, durch enge Kommunikation, das Projekt nach einheitlicher zu gestalten.
 Folgende Phasen und Hilfsmittel sind dabei wichtig:
-\begin{itemize}
-    \item Sprint Planning\\
+
+    \paragraph{Sprint Planning}\mbox{} \\
     Am Anfang eines jeden Sprintes wird immer das Warum, Was und Wie geklärt. 
     Es wird jeder früh mit ins Boot geholt und Unklarheiten geklärt.
     Hier können die Teammitglieder sich früh auf gemeinsames nutzen von bestimmten Bibliotheken oder Methoden einigen wie zum Beispiel einheitliche Namenskonventionen.
-    \item Daily Scrum\\
+    \paragraph{Daily Scrum}\mbox{} \\
     Die täglichen Meetings werden für den Informationsaustausch genutzt. 
     Dadurch ist jeder im Team vom aktuelle Stand im bilde. Probleme können hier frühzeitig kommuniziert und während des Sprintes angepasst werden.
-    \item Sprint Review\\
+    \paragraph{Sprint Review}\mbox{} \\
     Am Ende eines Sprintes wird im Review das Ergebniss präsentiert und überprüft, ob erwartete Anforderungen im Sprint Planning erreicht wurden.
      Je nach fortschritt können die Anforderungen, im nächsten Sprint Planning, agil angepasst werden.
-    \item Sprint-Retrospektive\\
+    \paragraph{Sprint-Retrospektive}\mbox{} \\
     Wie in Sprint Review steht auch die Sprint-Retrospektive am Ende eines jeden Sprintes an. Hier wird im Team die vergangene Arbeitweise überdacht und geplant wie diese effektiver wird.
     Dies hat langfristig den Vorteil zwischenmenschliche Probleme im Team als auch Arbeitsweisen für das Projekt zu verbessern und den Erfolg zu steigern.
-    \item Produkt Backlog\\
+    \paragraph{Produkt Backlog}\mbox{} \\
     Im Backlog stehen für jeden die aktuell nötigen Anforderungen transparent für jeden einsehbar. 
     Er wird ständig vom Team aktualisiert und man erkennt daraus den aktuellen Bearbeitungsstatus.
-    \item Definition of Done\\
+    \paragraph{Definition of Done}\mbox{} \\
     Um eine Anforderung wirklich als abgeschlossen zu bezeichnen, gibt es Bedingungen die vom Team aufgestellt wurden die vorher erfüllt werden müssen.
     Sie enthalten Qualitätskriterien die vom Team aufgestellt wurden.
-     
-\end{itemize}
+
 \section{Fazit}
 
 \bibliographystyle{plain}
