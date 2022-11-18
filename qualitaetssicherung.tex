@@ -173,28 +173,26 @@ Zur ersten Frage verweist Brooks hier auf das nächste Kapitel, was wir an diese
 \\
 \noindent Auch die letzte Frage wird klar mit einem Nein beantwortet. Während ein kleines Team von Architekten natürlich länger braucht, bis die gesamte Architektur fertiggestellt ist, müssen die Programmierer keinesfalls bis dahin warten um mit ihrer Arbeit beginnen. Sobald erste Informationen zu Features und Technologie bekannt sind und konkrete Kosten- und Performanceziele verfügbar sind können beispielsweise Tabellenstrukturen, Paketstrukturen oder allgemeine Algorithmen entworfen werden. Die Arbeitsaufteilung in Architektur, Implementierung und gegebenenfalls Realisierung bedeutet also nicht, dass die Umsetzung deshalb länger dauert, oder Angestellte im leerlauf Ressourcen verschwenden. 
 
-\section{Wischiwaschi}
-Die Definition der widerspruchsfreien Anforderungen mit hoher Kohärenz ist schwierig greifbar und macht es problematisch, die Integrität an sich zu messen.
-Eine gute Alternative, um die Integrität deutlicher zu machen, wäre die Abwesenheit von dieser festzustellen. Für diese Ausarbeitung haben wir uns für den Begriff 'Wischiwaschi' entschieden, da er auch in unserer Quelle so Verwendung findet und uns auch etwas passend scheint. Indikatoren für Wischiwaschi wären: \\
-\begin{itemize}
-\item Unklare, widersprüchliche oder mehrdeutige Anforderungen\\
+\section{Wischiwaschi-Metrik}
+Die Definition der widerspruchsfreien Anforderungen mit hoher Kohärenz ist schwierig greifbar und damit schwierig zu überprüfen. Die Wischiwaschi-Metrik ist eine Herangehensweise, bei der die Abwesenheit von konzeptioneller Integrität anhand verschiedener Indikatoren gemessen wird. Hier ist zu beachten, dass manche dieser Indikatoren durchaus Subjektiv sind und nicht alle objektiv gemessen werden können. Die meisten können jedoch quantitativ dargestellt werden, indem man beispielsweise die benötigte Zeit verschiedener Vorgänge misst und mit der ursprünglich für diesen Vorgang geplanten Zeit vergleicht. Die letztendliche Interpretation dieses Maßes ist allerdings wiederum subjektiv. Dennoch handelt es sich bei der Wischiwaschi-Metrik um einen Indikator, der sehr Hilfreich dabei ist, das Team bei der Einschätzung des Maßes für konzeptionelle Integrität zu unterstützen. 
+Im Folgenden werden einige Indikatoren der Wischiwaschi-Metrik näher beleuchtet:
+\paragraph{Unklare, widersprüchliche oder mehrdeutige Anforderungen}\mbox{} \\
 Beispiele für diesen Punkt sind nicht verstandene oder schlecht erklärte User Storys oder Roadmaps.
-\item Lange Abstimmungsrunden\\
+\paragraph{Lange Abstimmungsrunden}\mbox{} \\
 Gründe wären zu lange Diskussionen, zu viele Verständnisfragen oder Erklärungen zum Projekt
-\item Hohe Änderungsraten\\
+\paragraph{Hohe Änderungsraten}\mbox{} \\
 Wenn sich die Anforderungen in einer hohen Frequenz ändern und der aktuelle Entwicklungsstand dementsprechend aktualisiert werden muss. Beispiele wären von Anfang an unklare Anforderungen, die während der Projektlaufzeit spezifiziert werden.
-\item Explodierende Kosten\\
+\paragraph{Explodierende Kosten}\mbox{} \\
 Da die tatsächlichen Kosten die der geplanten Kosten übersteigen ist es möglich, dass die Projektplanung, aufgrund falsch verstandener Anforderungen, schiefgelaufen ist.
-\item Projektverzug\\
+\paragraph{Projektverzug}\mbox{} \\
 Gründe können für ein Projektverzug sein, dass die Aufwandsschätzungen, wegen mangel an Verständnis für das Projekt, einfach schlecht waren.
-\item Hohe Komplexität\\
+\paragraph{Hohe Komplexität}\mbox{} \\
 Es werden im Team viele Fehler gemacht oder das Verstehen des Projektes scheint schwer zu sein. So steigt die Schieflage immer mehr, je mehr Anforderungen an das Projekt gestellt werden.
-\item Schlechte Performance\\
+\paragraph{Schlechte Performance}\mbox{} \\
 Die Performance ist daher ein Indiz, da das Projekt für die Anwendung ungeeignete oder falsche Werkzeuge nutzt. Mögliche Gründe wären hier zu hohe Änderungsraten, bei denen dann die Werkzeuge nicht optimiert oder ausgetauscht wurden. Auch ein falsches Verständnis vom Projekt könnte eine falsche Annahme der benötigten Mittel herbeiführen.\\
 Ein weiterer Grund könnte die unnötige Komplexität des Projektes sein. Funktionen, die einander beeinflussen und somit die Performance reduzieren.
-\item Hohe Lernkurve der Anwendung\\
+\paragraph{Hohe Lernkurve der Anwendung}\mbox{} \\
 Hohe Lernkurven können passieren aufgrund nicht durchdachtem Design der Anwendung. Ursachen dafür könnten schlecht verstandene Anforderungen, die zu einem schlechten Designkonzept führen.
-\end{itemize}
 
 \section{Maßnahmen gegen Wischiwaschi}
 Um diese Problematiken zu lösen gibt es mehrere Ansatzpunkte, die wir in Folge erklären.
