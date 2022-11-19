@@ -200,51 +200,33 @@ Mit Anforderungsmanagement ist hier die Methode der Aufnahme und Kommunikation d
 Anforderungen müssen klar, widerspruchsfrei und eindeutig vom Auftraggeber formuliert werden. Sie sind die Grundsteine, damit das Projekt später die konzeptionelle Integrität erfüllt. Um möglichst gute Anforderungen zu erhalten, gibt es Kriterien, die beachtet werden müssen:
 
 \paragraph{Abgestimmtheit:}\mbox{} \\
-Anforderungen müssen mit allen Stakeholdern abgestimmt werden.
-Stakeholder müssen die Anforderung als korrekt und notwendig erachten.
-Dies vermeidet widersprüchliche Anforderungen.
-\paragraph{Eindeutigkeit:}\mbox{} \\
-Alle Leser müssen beim Studium der Anforderung zum selben Ergebnis kommen. 
-Eine Mehrfachinterpretation sollte somit nicht möglich sein.
-Dies spricht auch für den Bezug auf ein konkretes Lösungsdesign (zum Beispiel in Form eines Prototyps), denn nur dann können die Anforderungen von allen gleich interpretiert werden.
-\paragraph{Notwendigkeit:}\mbox{} \\
-Anforderungen müssen den Gegebenheiten im Kontext entsprechen. 
-Eine Gegebenheit kann die Erwartung eines Stakeholders sein oder die API-Spezifikation eines externen Dienstes.
-\paragraph{Konsistenz:}\mbox{} \\
-Anforderungen müssen sowohl in sich selbst als auch im Vergleich mit anderen Anforderungen konsistent sein. 
-Es darf also keine Widersprüche geben.
+Alle Beteiligten sollten über die Anforderungen im Bilde sein und sie als korrekt und notwendig erachten. Unnötige Anforderung führen zu unnötiger Komplexität und damit zu Kosten, die keinen Mehrwert bieten.
+
 \paragraph{Prüfbarkeit:}\mbox{} \\
 Anforderungen müssen überprüfbar sein, damit man später feststellen kann, ob sie umgesetzt wurden. 
 Zur Überprüfung eignen sich Tests oder Messungen.
 \paragraph{Realisierbarkeit:}\mbox{} \\
-Nicht jede Anforderung ist im geforderten Budget umsetzbar. 
-Dies ist besonders schwierig, wenn bei den Stakeholdern wenig technisches Verständnis vorhanden ist.
-\paragraph{Verfolgbarkeit:}\mbox{} \\
-Der Ursprung der Anforderung muss angegeben werden. 
-Zudem sollte jede Anforderung einen eindeutigen Identifikator haben, damit sie referenziert werden kann.
+Nicht jede Anforderung ist im geforderten Budget umsetzbar. Die Umsetzbarkeit der Anforderungen sollte also rechtzeitig geprüft werden und die Anforderungen gegebenenfalls überarbeitet werden.
 \paragraph{Vollständigkeit:}\mbox{} \\
-Anforderungen müssen vollständig sein, d. h. die gewünschte Funktionalität in Gänze beschreiben.
+Wenn die Anforderungen den Funktionsumfang nicht vollständig beschreiben führt dies zu Willkür in der Implementierung. Um dies zu vermeiden, sollte die Vollständigkeit also geprüft werden.
 \paragraph{Verständlichkeit:}\mbox{} \\
-Die Anforderungen müssen von allen Stakeholdern verstanden werden können. 
-Um dies zu erreichen, sollten sie entweder in der Allgemeinsprache formuliert werden oder es müssen Begriffe in einem Glossar genau erklärt werden.
+Die Formulierung der Anforderungen sollte allgemein verständlich sein. Hierfür bietet sich eine standardisierte Sprache oder ein Glossar an.
 
 
 \subsection{Werkzeuge/Tools}
 
 \paragraph{Visualisierungen}\mbox{} \\
-Mithilfe von Grafiken festigt sich das Verständnis für die Anforderungen und klärt somit Widersprüche im Projekt besser auf. Selbst User Storys können helfen, auch wenn sie einem trivial vorkommen kann es jemanden anderem im Team, der nicht auf dem Stand ist, helfen.
+Mithilfe von Grafiken festigt sich das Verständnis für die Anforderungen und klärt somit Widersprüche im Projekt besser auf. Beispielsweise Userstories können helfen, bestimmte Vorgänge zu veranschaulichen.
 \paragraph{Application-Lifecycle-Management-Werkzeuge}\mbox{} \\
-Die Anforderungen müssen möglichst widerspruchsfrei und kohärent bleiben, auch bei Änderungen. Da dies durch viele Informationen und hohe Änderungsfrequenz schwierig ist, können wir uns sogenannte Application-Lifecycle-Management-Werkzeuge (ALM-Werkzeuge) zur Hilfe nehmen. Diese unterstützen die strukturierte Ablage sowie Änderungsprozesse der Informationen gut.\
-\paragraph{Taxonomie-Software}\mbox{} \\
-Es hilft eine große Menge von Anforderungen nach zu Strukturen zu definieren. So können über so eine Software diese Anforderungen gruppiert und nach bedarf jederzeit wiedergefunden werden.
+Die Anforderungen müssen möglichst widerspruchsfrei und kohärent bleiben, auch bei Änderungen. Da dies durch viele Informationen und bei hoher Änderungsfrequenz schwierig ist, können wir uns sogenannte Application-Lifecycle-Management-Werkzeuge (ALM-Werkzeuge) zur Hilfe nehmen. Diese unterstützen die strukturierte Ablage sowie Änderungsprozesse der Informationen gut.
 \paragraph{Wiki-Software}\mbox{} \\
-So brauchen manche Entwicklungen, vor allem die mittelgroßen bis großen Projekte, mehrere Seiten an Dokumentationen. Teilweise können diese Dokumentationen für die Mitarbeiter unübersichtlich werden und dazu führen, dass die Softwareentwicklung so ins Stocken kommt. Um dies zu verhindern, muss geschaut werden, dass die wichtigen Informationen auf eine zugängliche Art und Weise dokumentiert als auch aktualisiert werden, um Fehlinformationen oder Missinterpretationen zu minimieren.
+Gerade bei großen Projekten werden viele Seiten an Dokumentation benötigt. Diese kann schnell unübersichtlich werden und dazu führen, dass die Softwareentwicklung ins Stocken kommt. Um dies zu verhindern, kann beispielsweise ein Wiki verwendet werden, um die Dokumentation zu organisieren und auf einfachem Wege zu aktualisieren.
 
 
 \section{Vorteile hoher konzeptioneller Integrität}
 \paragraph{Wartbarkeit/Änderbarkeit}\mbox{} \\
-Je konsistenter die Anforderungen und je klarer die Ziele, desto einfacher ist es, Änderungen an den Anforderungen einzubringen, und die entsprechenden Anpassungen an der Software vorzunehmen. 
-Daraus folgt, dass die Software auch länger in Betrieb gehalten werden kann, da sie sich besser anpassen lässt.
+Je konsistenter die Anforderungen und je klarer die Ziele, desto einfacher ist es auch, diese zu ergänzen, und entsprechende Anpassungen an der Software vorzunehmen. 
+Somit kann die Lebensdauer der Software beispielsweise durch regelmäßige Updates und Ergänzungen verlängert werden.
 \paragraph{Bedienbarkeit/Erlernbarkeit}\mbox{} \\
 Die Lernkurve wird niedrig gehalten, wenn die Systemfunktionalität insgesamt schlüssig ist.
 \paragraph{Angepasste Komplexität}\mbox{} \\
