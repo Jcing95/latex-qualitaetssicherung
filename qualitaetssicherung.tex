@@ -181,18 +181,17 @@ Wenn die Anforderungen schwammig definiert sind, kann dies dazu führen, dass si
 \paragraph{Lange Abstimmungsrunden}\mbox{} \\
 Wenn Abstimmungsrunden regelmäßig den für sie vorgesehenen Zeitrahmen sprengen deutet dies auf Missverständnisse bezüglich des Konzepts hin. Um dies zu Messen empfiehlt es sich die Dauer dieser Abstimmungsrunden aufzuzeichnen und bei regelmäßiger Überschreitung der geplanten Zeit entsprechende Maßnahmen treffen.
 \paragraph{Hohe Änderungsraten}\mbox{} \\
-Wenn sich die Anforderungen in einer hohen Frequenz ändern und der aktuelle Entwicklungsstand dementsprechend aktualisiert werden muss. Beispiele wären von Anfang an unklare Anforderungen, die während der Projektlaufzeit spezifiziert werden.
+Eine hohe Änderungsfrequenz bei den Anforderungen deutet auf unpräzise Anforderungen. Dies kann zu Implementierungsarbeit die mehrfach erledigt werden muss führen, genau dann, wenn bereits umgesetzte Anforderungen noch einmal geändert werden. Um dies zu Messen empfiehlt es sich Änderungen an Anforderungen nach der initialen Definition dieser zu dokumentieren, und bei Häufung dieser Änderungen diese noch einmal grundsätzlich zu überprüfen.
 \paragraph{Explodierende Kosten}\mbox{} \\
-Da die tatsächlichen Kosten die der geplanten Kosten übersteigen ist es möglich, dass die Projektplanung, aufgrund falsch verstandener Anforderungen, schiefgelaufen ist.
+Ein Kostenrahmen, der überzogen wird, weist darauf hin, dass die Anforderungen den geplanten Umfang des Projektes übertreffen. Sobald die bisherigen Kosten zum gegenwärtigen Zeitpunkt die erwarteten Kosten wesentlich übertreffen, sollte man sich Gedanken machen, ob dies sich im weiteren Projektverlauf bessern wird, oder die Rahmenbedingungen für das Projekt überarbeitet werden sollen. Hierfür sollten die entstehenden kosten regelmäßig transparent dokumentiert werden um frühzeitig eine Divergenz zwischen erwarteten kosten und tatsächlichen kosten zu bemerken und entsprechende Maßnahmen durchführen zu können. Je später diese Divergenz auffällt, desto gravierender sind die Konsequenzen.  
 \paragraph{Projektverzug}\mbox{} \\
-Gründe können für ein Projektverzug sein, dass die Aufwandsschätzungen, wegen mangel an Verständnis für das Projekt, einfach schlecht waren.
+Wenn definierte Zwischenziele regelmäßig nicht eingehalten werden können, sind diese Zwischenziele offensichtlich nicht angemessen definiert. Dies kann ein Indikator für eine unklare Anforderungsdefinition sein, wenn die Implementierung einzelner Anforderungen mehr Zeit als erwartet erfordert, oder ein Zeichen für zu viele Anforderungen sein. Die Anforderungen sollten also noch einmal überprüft werden. 
 \paragraph{Hohe Komplexität}\mbox{} \\
-Es werden im Team viele Fehler gemacht oder das Verstehen des Projektes scheint schwer zu sein. So steigt die Schieflage immer mehr, je mehr Anforderungen an das Projekt gestellt werden.
+Typischerweise steigt die Schieflage der Anforderungen mit ihrer Anzahl. Wenn die Komplexität des Projektes unverhältnismäßig hoch erscheint, ist dies oft ein Zeichen nicht kohärenter Anforderungen. Dies ist ein sehr subjektives Maß, sollte aber dennoch Beachtung finden. Bei aufgeblähten Projekten sollten die Anforderungen noch einmal überprüft und gegebenenfalls reduziert werden.
 \paragraph{Schlechte Performance}\mbox{} \\
-Die Performance ist daher ein Indiz, da das Projekt für die Anwendung ungeeignete oder falsche Werkzeuge nutzt. Mögliche Gründe wären hier zu hohe Änderungsraten, bei denen dann die Werkzeuge nicht optimiert oder ausgetauscht wurden. Auch ein falsches Verständnis vom Projekt könnte eine falsche Annahme der benötigten Mittel herbeiführen.\\
-Ein weiterer Grund könnte die unnötige Komplexität des Projektes sein. Funktionen, die einander beeinflussen und somit die Performance reduzieren.
+Wenn die Software eine schlechte Performance aufweist, deutet dies auf eine unverhältnismäßig komplexe Implementierung oder ungeeignete Technologien hin. Hier sollten die Rahmenbedingungen beziehungsweise die Anforderungen noch einmal überprüft werden. Um die Performance der Software kontinuierlich zu testen, bieten sich automatisierte Unit- beziehungsweise Integrationstests an.
 \paragraph{Hohe Lernkurve der Anwendung}\mbox{} \\
-Hohe Lernkurven können passieren aufgrund nicht durchdachtem Design der Anwendung. Ursachen dafür könnten schlecht verstandene Anforderungen, die zu einem schlechten Designkonzept führen.
+Wenn Nutzer lange brauchen um die Anwendung zu verstehen, deutet dies auf ein unstimmiges Design der Anwendung hin. Hier sollte das Interface noch einmal überarbeitet werden. Um diese Lernkurve zu Messen bieten sich Tests durch Personen, die nicht aktiv bei der Konzeption der Anwendung beteiligt waren, an. 
 
 \section{Maßnahmen gegen Wischiwaschi}
 Um diese Problematiken zu lösen gibt es mehrere Ansatzpunkte, die wir in Folge erklären.
