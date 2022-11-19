@@ -89,17 +89,17 @@ Diese \texttt{architektonische Integrität} konnte nur zustande kommen, indem di
     \begin{subfigure}{.43\textwidth}
         \centering
         \includegraphics[width=.9\linewidth]{images/Facade_de_Notre_Dame_de_Reims.png}
-        \caption{Kathedrale von Reims \footnotemark}
+        \caption{Kathedrale von Reims \footnotemark[2]}
     \end{subfigure}%
     \begin{subfigure}{.57\textwidth}
         \centering
         \includegraphics[width=.9\linewidth]{images/LincolnCathedral.jpg}
-        \caption{Kathedrale von Lincoln \footnotemark}
+        \caption{Kathedrale von Lincoln \footnotemark[3]}
     \end{subfigure}
     \caption{Vergleich der verschiedenen architektonischen Einflüsse der Kathedrale von Reims und der Lincoln Kathedrale}
 \end{figure}
-\footnotetext{Von Johan Bakker, CC BY-SA 3.0,\\\url{https://commons.wikimedia.org/w/index.php?curid=38255047}}
-\footnotetext{Von Edbwilco - Eigenes Werk, CC BY-SA 4.0,\\\url{https://commons.wikimedia.org/w/index.php?curid=62286479}}
+\footnotetext[2]{Von Johan Bakker, CC BY-SA 3.0,\\\url{https://commons.wikimedia.org/w/index.php?curid=38255047}}
+\footnotetext[3]{Von Edbwilco - Eigenes Werk, CC BY-SA 4.0,\\\url{https://commons.wikimedia.org/w/index.php?curid=62286479}}
 \subsection{Software-Analogie}
 Aber was haben Kathedralen mit der Entwicklung von Softwareprojekten zu tun? Typischerweise bestehen die Teams, die insbesondere große Softwareprojekte umsetzen, aus vielen Entwicklern. Softwareingenieure neigen hierbei auch dazu eine feste Meinung zu haben, wie bestimmte Probleme am besten zu lösen seien. Das ist natürlich menschlich, kann aber dazu führen, dass die Vision des Projektes aus dem Gleichgewicht gerät. Es entsteht eine konzeptionelle Uneinigkeit, welche dazu führen kann, dass es zum Beispiel Probleme bei der Definition von Schnittstellen gibt, was die Entwicklungszeit in die Länge treibt. Es kann aber auch dazu führen, dass der Nutzer bei verschiedenen Komponenten unterschiedlich agieren muss, dadurch verwirrt wird und das Erlernen der Benutzung dieser Software schwerer fällt. Im Vergleich zu Bauprojekten, wie beispielsweise den Kathedralen, liegt die Ursache für diese Uneinigkeit bei Software allerdings nicht bei der Weitergabe des Projekts an nachfolgende Hauptdesigner oder Architekten, sondern an der Einteilung des Designs in viele Aufgaben, die von vielen verschiedenen Menschen bearbeitet werden. \cite{Brooks1975}
 
@@ -132,11 +132,11 @@ Angenommen, es gibt eine API-Schnittstelle, die das Geburtsdatum eines Kunden in
 
 \subsubsection{Bestellsystem}
 In einem internationalen Unternehmen, welches sowohl in Deutschland, als auch der Schweiz operiert wird die Anforderung definiert, die Gültigkeit von Postleitzahlen zu prüfen. Hierbei wird ein System von den deutschen Entwicklern umgesetzt und diese implementieren nach bestem Wissen und Gewissen eine Prüfung für eine genau fünfstellige Zahlenkombination. Da das System nun aber auch in der Schweiz funktionieren soll, stößt man bei der Integration dieses Systems auf die Tatsache, dass gültige Postleitzahlen in der Schweiz aus einer vierstelligen Zahlenkombination bestehen. Je nach Umfang des bereits umgesetzten Systems führt dies nun zu tiefgreifenden Änderungen, die durchgeführt werden müssen. Dies hätte beispielsweise mit einer präziseren Definition der Anforderung vermieden werden können.
-
+\pagebreak
 \subsubsection{Einheitlichkeit}
 Bei gängigen Smartphone-Betriebssystemen wie beispielsweise iOS oder Android existieren sogenannte \texttt{Stilvorgaben}. Diese beschreien die Menüführung und das grundsätzliche Layout verschiedener Elemente. Sie werden auch im Betriebssystem durchgehend angewandt. Bestimmte Elemente, wie der Zurück-Knopf, oder ein Burgermenu finden sich immer an derselben Stelle. Richtet sich also ein App-Entwickler nicht an diese \texttt{Stilvorgaben}, treffen die Nutzer nicht an erwarteter Stelle, an diese Elemente und finden diese gegebenenfalls gar nicht. Dies führt zu Verwirrung und damit zu starken Einschränkungen der Benutzbarkeit und Bedienfreude dieser App und sollte natürlich verhindert werden. Hierbei ist auch zu beachten, dass diese \texttt{Stilvorgaben} von Betriebssystem zu Betriebssystem unterschiedlich sind, was insbesondere bei Plattformübergreifenden Apps beachtet werden muss. Auch gilt es zu beachten, dass nicht nur das Layout verschieden sein kann, sondern auch Symbole eine gewisse Bedeutung haben und bei falscher Benutzung falsch oder möglicherweise gar nicht wahrgenommen werden könnten. In modernen Betriebssystemen gibt es auch oft Steuerungsgesten, welche auf Betriebssystemebene funktionieren, um beispielsweise zwischen Apps zu wechseln, diese zu minimieren oder eine Statusleiste einzublenden. Hierbei sollte darauf geachtet werden, dass diese nicht innerhalb der App auch benötigt, oder sogar im Widerspruch zu ihnen stehen, da diese sonst nicht die Erwartung der Nutzer erfüllen, sehr schwer zu entdecken sind oder im Zweifel gar nicht verwendet werden können.  
 
-\subsection{Anwendungs-Suites}
+\subsubsection{Anwendungs-Suites}
 Große Softwareangebote, wie beispielsweise Microsoft Office, oder die Adobe Creative Cloud bieten viele verschiedene Programme, die zueinander in einem gewissen Kontext stehen in einem Gesamtpaket an. Hierbei ist es, im Sinne der konzeptionellen Integrität, dieses Angebot in verschiedene Anwendungen zu unterteilen, statt zu versuchen, eine Art eierlegende Wollmilchsau zu entwickeln. Dies minimiert die Komplexität der Projekte massiv und spart dadurch bei der Konzeption und Implementierung dieser Programme an Zeit. Außerdem ist es dadurch möglich Teams auf die verschiedenen Anwendungen zu verteilen, in denen sich diese dann besser einfinden können. Auch für die Nutzer ist es wesentlich leichter eine dieser Anwendungen zu lernen, beziehungsweise ist die Nutzung wesentlich zweckgebundener, und es muss sich nicht vor dem Start der Arbeit mit diesem Programm durch etliche Menüs geklickt werden, um den gewollten Arbeitsmodus einzustellen. Diese Herangehensweise kann allerdings auch zu Problemen führen, die tatsächlich bei beiden dieser Beispiele gravierend sind. Durch die getrennte Entwicklung dieser Anwendungen kann die Anwendungsübergreifende konzeptionelle Integrität in dem Sinne in Mitleidenschaft gezogen werden, dass beispielsweise verschiedene Menübänder verwendet werden oder identische Funktionen in der einen Software an anderer Stelle gefunden werden, als in der anderen. Bei den meisten Adobe-Creative-Cloud-Anwendungen beispielsweise benötigt man für die Zoom-Funktion die Eingabekombination \texttt{Alt} + \texttt{Mausrad}, während man hierfür bei Adobe-Animate die Kombination \texttt{Strg} + \texttt{Mausrad} verwendet. Dies führt dann natürlich beim Benutzen der einen Software insbesondere dann zu Problemen, wenn man bereits mit der Herangehensweise aus den anderen Anwendungen vertraut ist.
 
 \section{Die Architekten}
@@ -146,6 +146,7 @@ Selbst 20 Jahren danach, im Jahre 1995, ist Brooks weiterhin von dieser Idee üb
     Today I am more convinced than ever. Conceptual integrity is central to product quality. Having a system architect is the most important single step toward conceptual integrity. These principles are by no means limited to software systems, but to the design of any complex construct, whether a computer, an airplane, a Strategic Defense Initiative, a Global Positioning System. After teaching a software engineering laboratory more than 20 times, I came to insist that student teams as small as four people choose a manager and a separate architect. Defining distinct roles in such small teams may be a little extreme, but I have observed it to work well and to contribute to design success even for small teams. \cite{wikic2:conceptual_integrity}
 \end{quote}
 Dies bedeutet also insbesondere, dass man nicht das gesamte Team in den Designprozess einbeziehen sollte. Nur in sehr kleinen Architektenteams kann die Integrität und Qualität des Designs gewährleistet werden.
+\pagebreak
 So ist es unter anderem die Aufgabe der Architekten zu entscheiden:
 \begin{itemize}
     \item Welche Features Einzug ins Design finden, welche nachgereicht oder außen vor gelassen werden
@@ -193,6 +194,7 @@ Wenn die Software eine schlechte Performance aufweist, deutet dies auf eine unve
 \paragraph{Hohe Lernkurve der Anwendung}\mbox{} \\
 Wenn Nutzer lange brauchen um die Anwendung zu verstehen, deutet dies auf ein unstimmiges Design der Anwendung hin. Hier sollte das Interface noch einmal überarbeitet werden. Um diese Lernkurve zu Messen bieten sich Tests durch Personen, die nicht aktiv bei der Konzeption der Anwendung beteiligt waren, an. 
 
+\pagebreak
 \section{Maßnahmen gegen Wischiwaschi}
 Um diese Problematiken zu lösen gibt es mehrere Ansatzpunkte, die wir in Folge erklären.
 \subsection{Anforderungsmanagement}
@@ -212,7 +214,7 @@ Wenn die Anforderungen den Funktionsumfang nicht vollständig beschreiben führt
 \paragraph{Verständlichkeit:}\mbox{} \\
 Die Formulierung der Anforderungen sollte allgemein verständlich sein. Hierfür bietet sich eine standardisierte Sprache oder ein Glossar an.
 
-
+\pagebreak
 \subsection{Werkzeuge/Tools}
 
 \paragraph{Visualisierungen}\mbox{} \\
@@ -254,6 +256,7 @@ Heutzutage ist das Projekt-Management-Framwork Scrum in der Informatik sehr weit
     Am Anfang eines jeden Sprintes wird immer das \texttt{Warum}, \texttt{Was} und \texttt{Wie} geklärt. 
     Jeder wird früh ins Boot geholt und Unklarheiten frühzeitig aufgeklärt.
     Hier können sich die Teammitglieder früh auf das gemeinsame Nutzen von bestimmten Bibliotheken oder Methoden einigen, wie Beispielsweise eine einheitliche Namenskonvention.
+    \pagebreak
     \paragraph{Daily Scrum}\mbox{} \\
     Die täglichen Meetings werden für den internen Informationsaustausch genutzt.
     Dadurch ist jeder im Team vom über das Geschehen im Bilde und die Abgestimmtheit automatisch erfüllt.
@@ -270,7 +273,7 @@ Heutzutage ist das Projekt-Management-Framwork Scrum in der Informatik sehr weit
     \paragraph{Definition of Done}\mbox{} \\
     Um eine Anforderung wirklich als abgeschlossen zu bezeichnen, gibt es vom Team definierte Bedingungen, die erfüllt sein müssen.
     Sie enthalten unter anderem wichtige Qualitätskriterien. Wird diese bei einer Anforderung lange nicht erreicht, deutet dies über eine unpräzise Anforderung hin und sie kann frühzeitig überarbeitet werden.
-
+\pagebreak
 \section{Fazit}
     Die konzeptionelle Integrität ist nach wie vor ein äußerst wichtiger Bestandteil der Qualitätssicherung. Sie ist heute noch genauso essenziell für hochwertige Anwendungen, wie sie es schon vor einem halben Jahrhundert war. Auch wenn das Projektmanagement heute in großen Teilen überarbeitet wurde und stark Richtung agile Entwicklung tendiert, spielt die konzeptionelle Integrität eine zentrale Rolle. Durch agile Organisationsformen ist es außerdem nicht mehr nötig, das Team zwingend in Architekten und Programmierer zu unterteilen und die Frage der Aristokratie und Demokratie erübrigt sich.
 \bibliographystyle{plain}
