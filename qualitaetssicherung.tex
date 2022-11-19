@@ -230,44 +230,37 @@ Somit kann die Lebensdauer der Software beispielsweise durch regelmäßige Updat
 \paragraph{Bedienbarkeit/Erlernbarkeit}\mbox{} \\
 Die Lernkurve wird niedrig gehalten, wenn die Systemfunktionalität insgesamt schlüssig ist.
 \paragraph{Angepasste Komplexität}\mbox{} \\
-Durch eine hohe Kohäsion und ein gut konzipiertes System, bleibt die Komplexität im erforderlichen Rahmen.
+Durch eine hohe Kohäsion und ein gut konzipiertes System bewegt sich die Komplexität in einem angemessenen Rahmen.
 \paragraph{Performance}\mbox{} \\
-Da sich die Komplexität im nötigen Rahmen bewegt, wird die Performance dadurch nicht beeinflust.
-Es entsteht eine geeignete Ausgangssituation.
+Da sich die Komplexität so minimal wie möglich ist, wird die Performance dadurch nicht in Mitleidenschaft gezogen.
 \paragraph{Planbarkeit}\mbox{} \\
-Die Anforderungen sind sehr gut verstanden worden. Somit steigt, durch bessere Aufwandschätzung der Beteiligten, die Planbarkeit.
+Durch eine präzise Anforderungsdefinition ist auch eine präzise Aufwandsschätzung möglich. Erwartete Preisrahmen können eingehalten werden.
 
 \section{Konzeptionelle Integrität im Scrum-Prozess}
-Heutzutage ist Scrum weit verbreitet in der Informatik. Da stellt sich dann die Frage, ob die konzeptionelle Integrität auch in Scrum erfüllbar wäre?
-Wir meinen Ja, auch in eine etwas abgewandelten Form. So gibt es einen Architekten im Team, der meisten spezielle Eigenschaften erfüllt.
+Heutzutage ist das Projekt-Management-Framwork Scrum in der Informatik sehr weit verbreitet. Ist die konzeptionelle Integrität hier auch erfüllbar?
+    Wir meinen Ja, auch wenn hierfür die Aufgabenverteilung etwas anders aussieht, als von Brooks beschrieben. Beispielsweise gibt es die Rolle des Architekten:
 
-    \paragraph{Der Architekt hat bezüglich technischen Fragen das letzte Wort im Team}\mbox{} \\
-    Der Architekt hört sich Vorschläge oder Ideen an und wägt ab, ob diese Vorschläge, einen machbaren Fortschritt bringen oder nicht.
-    Die abgewogenen Entscheidungen finden unter der Beachtung von Vorgaben statt, die von den Stakeholdern getroffen wurden.
+    \paragraph{Der Architekt hat bezüglich der Architektur das letzte Wort}\mbox{} \\
+    Er konzipiert die Architektur aber nicht alleine, sondern koordininert den Designprozess und sorgt für dessen Integrität indem er von seinem Veto-Recht Gebrauch macht. 
     
     \paragraph{Der Architekt gehört zum Projekt und stiftet dem Projekt Nutzen}\mbox{} 
-    Häufig kommt es vor, dass der Architekt direkt im Team involviert ist und sich aktiv in der Entwicklung beteiligt.
-    Nicht selten ist er eine Mentorfigur (Senior/Ausbilder) der im Projektteam helfen kann.
+    Häufig kommt es vor, dass der Architekt direkt im Team involviert ist und sich auch aktiv in der Entwicklung beteiligt.
+    Typischerweise erfüllt er Mentor-Rolle (Senior/Ausbilder) und unterstützt die anderen Entwickler.\\
     
-    \paragraph{Architekt kann gleichzeitig der Product Owner sein}\mbox{} \\
-    Der Product Owner ist neben dem Scrum Master und dem Entwickler die dritte Rolle im Scrum Team.
-    Oft sind diese Rollen nicht klar voneinander getrennt, was es dem Product Owner möglich macht aktiv an der Entwicklung beteiligt zu sein.\\
-    
-    Scrum ist an sich ein gutes Konzept, um sowohl im als auch außerhalb des Projektteams Transparenz zu schaffen.
-    Dies ermöglicht frühzeitig Schieflagen im Projekt zu erkennen und zu lösen. Auch erhöht es den Erfolg, durch enge Kommunikation, das Projekt noch einheitlicher zu gestalten.
+    Durch die Agilität, die Scrum bietet können schnell auf Probleme reagiert werden. Eine drohende mangelhafte konzeptionelle Integrität kann also schnell erkannt und abgewandt werden.
     Folgende Phasen und Hilfsmittel sind dabei wichtig:
 
     \paragraph{Sprint Planning}\mbox{} \\
     Am Anfang eines jeden Sprintes wird immer das \texttt{Warum}, \texttt{Was} und \texttt{Wie} geklärt. 
-    Jeder wird früh ins Boot geholt und somit Unklarheiten geklärt.
-    Hier können sich die Teammitglieder früh auf das gemeinsame Nutzen von bestimmten Bibliotheken oder Methoden einigen. Zum Beispiel einheitliche Namenskonventionen.
+    Jeder wird früh ins Boot geholt und Unklarheiten frühzeitig aufgeklärt.
+    Hier können sich die Teammitglieder früh auf das gemeinsame Nutzen von bestimmten Bibliotheken oder Methoden einigen, wie Beispielsweise eine einheitliche Namenskonvention.
     \paragraph{Daily Scrum}\mbox{} \\
     Die täglichen Meetings werden für den internen Informationsaustausch genutzt.
-    Dadurch ist jeder im Team vom aktuelle Stand im Klaren. 
-    Probleme werden hier frühzeitig kommuniziert.
+    Dadurch ist jeder im Team vom über das Geschehen im Bilde und die Abgestimmtheit automatisch erfüllt.
+    Probleme können frühzeitig kommuniziert werden.
     \paragraph{Sprint Review}\mbox{} \\
     Am Ende eines Sprints wird das Ergebnis präsentiert und überprüft, ob erwartete Anforderungen aus dem Sprint Planning erreicht wurden.
-    Je nach Fortschritt können die Anforderungen, im nächsten Sprint Planning, agil angepasst werden.
+    Je nach Fortschritt können die Anforderungen, im nächsten Sprint Planning, agil angepasst werden. Die Wischiwaschi-Metrik kann angewandt werden beim weiteren Vorgehen als Kompass dienen.
     \paragraph{Sprint-Retrospektive}\mbox{} \\
     Wie im Sprint-Review steht auch die Sprint-Retrospektive am Ende eines jeden Sprints an. Hier gibt sich das Team in einer offenen Atmosphäre berechtigte Kritik aus der vergangenen Iteration, die im kommenden Sprint durch gemeinsam erarbeitete Lösungen verbessert werden soll.
     Dies hat langfristig den Vorteil, zwischenmenschliche Probleme im Team zu lösen sowie die Arbeitsweisen für das Projekt zu verbessern.
@@ -276,10 +269,10 @@ Wir meinen Ja, auch in eine etwas abgewandelten Form. So gibt es einen Architekt
     Er wird ständig vom Team aktualisiert und man erkennt daraus den aktuellen Bearbeitungsstatus.
     \paragraph{Definition of Done}\mbox{} \\
     Um eine Anforderung wirklich als abgeschlossen zu bezeichnen, gibt es vom Team definierte Bedingungen, die erfüllt sein müssen.
-    Sie enthalten unter anderem auch Qualitätskriterien.
+    Sie enthalten unter anderem wichtige Qualitätskriterien. Wird diese bei einer Anforderung lange nicht erreicht, deutet dies über eine unpräzise Anforderung hin und sie kann frühzeitig überarbeitet werden.
 
 \section{Fazit}
-
+    Die konzeptionelle Integrität ist nach wie vor ein äußerst wichtiger Bestandteil der Qualitätssicherung. Sie ist heute noch genauso essenziell für hochwertige Anwendungen, wie sie es schon vor einem halben Jahrhundert war. Auch wenn das Projektmanagement heute in großen Teilen überarbeitet wurde und stark Richtung agile Entwicklung tendiert, spielt die konzeptionelle Integrität eine zentrale Rolle. Durch agile Organisationsformen ist es außerdem nicht mehr nötig, das Team zwingend in Architekten und Programmierer zu unterteilen und die Frage der Aristokratie und Demokratie erübrigt sich.
 \bibliographystyle{plain}
 \bibliography{sources}
 \end{document}
